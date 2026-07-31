@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitra B - Resume</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #07111f;
+        --panel: #0f172a;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #729dff;
+        --accent-2: #7dd3fc;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, Arial, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #111827);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .topbar a {
+        color: var(--accent-2);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.92);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+      }
+      h1, h2, h3 { margin: 0 0 8px; }
+      .name { font-size: 2rem; margin-bottom: 6px; }
+      .title { color: var(--accent); font-weight: 700; }
+      .contact { color: var(--muted); margin-top: 10px; }
+      .section { margin-top: 26px; }
+      .section h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-2); }
+      .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      .pill {
+        background: rgba(114, 157, 255, 0.16);
+        color: #dbeafe;
+        padding: 7px 10px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+      }
+      ul { padding-left: 18px; margin: 8px 0 0; }
+      .muted { color: var(--muted); }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <strong>Mitra B</strong>
+        <a href="/">← Back to portfolio</a>
+      </div>
+
+      <div class="card">
+        <h1 class="name">MITRA</h1>
+        <div class="title">Mechatronics Engineering Undergraduate</div>
+        <div class="contact">Coimbatore, Tamil Nadu, India · +91 6374819018 · mitrabhuvanendran@gmail.com</div>
+        <div class="contact">LinkedIn: linkedin.com/in/mitra-bhuvanendran-45613732a</div>
+
+        <div class="section">
+          <h2>Career Objective</h2>
+          <p>Mechatronics Engineering undergraduate completing the 4th semester in April 2025, with strong interest and passion for core mechanical CAD design, ROS, and embedded systems. Gained exposure through academic projects and technical clubs. Seeking an internship opportunity in real-world engineering environments at robotics and automation-based firms, where I can contribute with discipline, curiosity, and a strong willingness to learn.</p>
+        </div>
+
+        <div class="section">
+          <h2>Education</h2>
+          <p><strong>Bachelor of Engineering: Mechatronics Engineering</strong><br />2024 - 2028<br />Kumaraguru College of Technology, Coimbatore, Tamil Nadu<br />CGPA: 9.2 (up to 3rd semester)</p>
+        </div>
+
+        <div class="section">
+          <h2>Technical Skills</h2>
+          <div class="pill-row">
+            <span class="pill">SolidWorks</span>
+            <span class="pill">Fusion 360</span>
+            <span class="pill">GD&amp;T</span>
+            <span class="pill">CNC / VMC</span>
+            <span class="pill">Welding</span>
+            <span class="pill">Sensors &amp; Actuators</span>
+            <span class="pill">PLC Fundamentals</span>
+            <span class="pill">MATLAB</span>
+            <span class="pill">ANSYS</span>
+            <span class="pill">ROS</span>
+            <span class="pill">Embedded Systems</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Internship, Project &amp; Experience</h2>
+          <ul>
+            <li><strong>Industrial Training at VRN Engineering Works</strong> — exposure to CNC and VMC machining operations.</li>
+            <li><strong>Internship at Hexgen Sports Pvt. Ltd.</strong> — involved in manufacturing and assembly of automatic bowling machines.</li>
+            <li><strong>Designed a detachable wheelchair ramp system</strong> focusing on portability, safety, and practical usability.</li>
+            <li><strong>Design Lead, E-Zeall Racing (Electric Go-Kart)</strong> — contributed to mechanical design and fabrication and won overall champions in national events GKDC, FKDC, and IKR.</li>
+            <li><strong>Joint Secretary</strong> of the Department of Mechatronics Engineering, Kumaraguru College of Technology.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Additional Information</h2>
+          <ul>
+            <li><strong>Languages:</strong> Tamil, English</li>
+            <li><strong>Awards / Activities:</strong> Mahatma Gandhi Scholarship Award (twice), Kumaraguru Achiever Award (twice), winner of paper presentation at a national-level technical symposium.</li>
+            <li><strong>Certifications:</strong> Scilab Training – Spoken Tutorial Project, IIT Bombay; MATLAB Onramp – MathWorks.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
