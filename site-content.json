@@ -1,0 +1,371 @@
+{
+  "identity": {
+    "name": "Mitra B",
+    "title": "Robotic Engineer",
+    "tagline": "Design Engineer specializing in CAD, CAE and electric race vehicle development, with growing expertise in robotics and autonomous systems.",
+    "photo": "/uploads/1785477810017-WhatsApp-Image-2026-07-30-at-14-14-25-jpeg.jpg",
+    "location": "Coimbatore, Tamil Nadu, India",
+    "email": "mitrabhuvanendran@gmail.com",
+    "phone": "+91 6374819018",
+    "linkedin": "https://www.linkedin.com/in/mitra-bhuvanendran-45613732a",
+    "resume": "#"
+  },
+  "roles": [
+    "Mechanical Design Engineer",
+    "CAD & CAE Engineer",
+    "E ZEALL Racing - Chassis Design Team Lead",
+    "ROS2 & Autonomous Systems Learner"
+  ],
+  "stats": [
+    {
+      "value": "04+",
+      "label": "technical events"
+    },
+    {
+      "value": "05+",
+      "label": "Projects in motion"
+    },
+    {
+      "value": "03",
+      "label": "Industrial internships"
+    },
+    {
+      "value": "01",
+      "label": "Research track"
+    }
+  ],
+  "about": {
+    "headline": "A systems-minded mechatronics engineer.",
+    "copy": "Focused on developing engineering solutions that combine functionality, manufacturability and performance. Experience includes mechanical design, finite element analysis, product development and vehicle engineering through hands-on industrial projects and national-level competitions.\n\nA strong foundation in CAD and engineering analysis is complemented by growing expertise in robotics, embedded systems and autonomous technologies. Every project is approached with an emphasis on technical accuracy, structured problem solving and continuous improvement, ensuring solutions are both innovative and practical.\n\nWith experience across design engineering, research and manufacturing environments, the objective remains consistent: to deliver reliable engineering solutions while continuously learning, adapting and contributing to multidisciplinary product development.",
+    "journey": [
+      {
+        "date": "Foundation",
+        "title": "Mechatronics",
+        "description": "Built a multidisciplinary base across mechanical, electronics and controls."
+      },
+      {
+        "date": "Design",
+        "title": "Mechanical Design",
+        "description": "Developed CAD-first thinking around mechanisms, tolerances and manufacturability.",
+        "image": ""
+      },
+      {
+        "date": "Motorsport",
+        "title": "E ZEALL Racing",
+        "description": "Applied analysis and fabrication practice to a competitive vehicle environment.",
+        "image": ""
+      },
+      {
+        "date": "Analysis",
+        "title": "Vehicle Analysis",
+        "description": "Explored structural behaviour, simulations and engineering trade-offs.",
+        "image": ""
+      },
+      {
+        "date": "Build",
+        "title": "Manufacturing",
+        "description": "Connected digital design decisions to materials, processes and the shop floor.",
+        "image": ""
+      },
+      {
+        "date": "Research",
+        "title": "Research",
+        "description": "Learned to turn questions into structured technical investigation.",
+        "image": ""
+      },
+      {
+        "date": "Industry",
+        "title": "Industrial Internships",
+        "description": "Expanded perspective through production-facing engineering work.",
+        "image": ""
+      },
+      {
+        "date": "Now",
+        "title": "Robotics → ROS2 → Autonomous Systems",
+        "description": "Developing the software and systems fluency required for mobile robotics.",
+        "image": ""
+      }
+    ]
+  },
+  "experience": {
+    "racing": {
+      "name": "E ZEALL Racing",
+      "eyebrow": "Chassis Design Team Lead",
+      "summary": "Led the chassis design team for an electric go-kart, handling CAD design, structural validation, manufacturing documentation and vehicle integration for national-level competitions..",
+      "banner": "/uploads/1785489108170-WhatsApp-Image-2026-04-10-at-19-58-09-1-jpeg.jpg",
+      "responsibilities": [
+        "Designed chassis and structural components using SolidWorks",
+        "Performed structural validation using ANSYS",
+        "Prepared manufacturing drawings and coordinated fabrication",
+        "Supported vehicle assembly and testing"
+      ],
+      "skills": [
+        "SolidWorks",
+        "ANSYS",
+        "GD&T",
+        "DFM",
+        "Vehicle Dynamics",
+        "Sheet Metal Design"
+      ],
+      "challenge": "Designing a lightweight yet strong chassis capable of withstanding front, side and rear impact loads while complying with competition regulations",
+      "decision": "Selected AISI 4130 Chromoly tubing and optimized the chassis geometry using finite element analysis to improve stiffness while minimizing weight.",
+      "result": "Successfully manufactured and validated the chassis for competition, contributing to reliable vehicle performance during national electric kart events.",
+      "lesson": "Learned that successful vehicle design requires balancing structural performance, manufacturability and competition constraints rather than focusing only on analysis results.",
+      "gallery": [
+        {
+          "label": "CAD assembly",
+          "url": "/uploads/1785481727139-Screenshot-2026-07-15-182944-png.png"
+        },
+        {
+          "label": "Impact Analysis",
+          "url": "/uploads/1785481778381-WhatsApp-Image-2026-07-17-at-17-13-29-jpeg.jpg"
+        },
+        {
+          "label": "structural analysis",
+          "url": "/uploads/1785481857609-WhatsApp-Image-2026-07-18-at-10-32-49-jpeg.jpg"
+        },
+        {
+          "label": "posture analysis",
+          "url": "/uploads/1785481957824-Screenshot-2025-12-27-201340-png.png"
+        }
+      ]
+    },
+    "internships": [
+      {
+        "company": "VRN Engineering",
+        "period": "June 2025",
+        "summary": "Completed industrial training focused on CNC machining, VMC operations and manufacturing processes.",
+        "logo": "",
+        "photos": [
+          "/uploads/1785481987263-l1-120x120-jpg.jpg"
+        ],
+        "technologies": [
+          "CAD",
+          "Manufacturing"
+        ],
+        "responsibilities": [
+          "Observed CNC and VMC machining operations",
+          "Studied manufacturing workflow and quality inspection"
+        ],
+        "learning": "Understood industrial machining processes, production planning and manufacturing tolerances."
+      },
+      {
+        "company": "Hexgen Sports Pvt Ltd",
+        "period": "Dec 2025",
+        "summary": "Worked on sports equipment product development, design improvements and manufacturing support.",
+        "logo": "",
+        "photos": [
+          ""
+        ],
+        "technologies": [
+          "Product Design",
+          "DFM"
+        ],
+        "responsibilities": [
+          "Supported product design activities",
+          "Assisted in prototype development"
+        ],
+        "learning": "Learned product development workflow from concept to manufacturing."
+      },
+      {
+        "company": "YOI Robotics Laboratory",
+        "period": "June 2026",
+        "summary": "Worked on ROS2-based mobile robotics, simulation and autonomous navigation concepts.",
+        "logo": "",
+        "photos": [
+          ""
+        ],
+        "technologies": [
+          "PCB Designing",
+          "ROS2"
+        ],
+        "responsibilities": [
+          "Developed ROS2 packages",
+          "Worked with Gazebo simulation and RViz visualization"
+        ],
+        "learning": "Gained practical knowledge in ROS2 architecture, simulation and robot software development."
+      }
+    ],
+    "research": {
+      "title": "Research in progress",
+      "abstract": "FDM Process Parameter Optimization",
+      "status": "Publication status: to be updated",
+      "image": "/uploads/1785488434341-Screenshot-2026-07-31-142715-png.png",
+      "technologies": [
+        "Creality 3D printing",
+        " Strength Analysis",
+        "Documentation"
+      ],
+      "paper": "#"
+    }
+  },
+  "projects": [
+    {
+      "title": "Autonomous Mobile Robot",
+      "type": "Robotics systems",
+      "banner": "/uploads/1785477989588-WhatsApp-Image-2026-07-24-at-09-49-03-jpeg.jpg",
+      "problem": "Develop an autonomous differential drive mobile robot capable of localization, mapping and navigation.",
+      "solution": "Built a ROS2-based robot using LiDAR, Gazebo simulation, RViz, SLAM Toolbox and Navigation2.",
+      "outcome": "Successfully simulated autonomous navigation and SLAM in ROS2.",
+      "skills": [
+        "ROS2",
+        "Gazebo",
+        "Rviz"
+      ],
+      "github": "#",
+      "gallery": [
+        {
+          "label": "Robot build",
+          "url": ""
+        },
+        {
+          "label": "Architecture diagram",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "title": "Detachable Wheelchair Ramp",
+      "type": "Accessibility engineering",
+      "banner": "/uploads/1785478552092-WhatsApp-Image-2026-07-31-at-11-45-02-jpeg.jpg",
+      "problem": "Designed a portable wheelchair ramp for locations without permanent accessibility infrastructure.",
+      "solution": "Created a lightweight detachable folding mechanism using SolidWorks.",
+      "outcome": "Successfully developed a functional CAD prototype.",
+      "skills": [
+        "SolidWorks",
+        "strutural analysis",
+        "Mechanisms"
+      ],
+      "github": "#",
+      "gallery": [
+        {
+          "label": "CAD concept",
+          "url": ""
+        },
+        {
+          "label": "Prototype",
+          "url": "/uploads/1785477951290-WhatsApp-Image-2026-07-18-at-10-32-49-jpeg.jpg"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "SolidWorks",
+      "category": "CAD Design",
+      "logo": "SW",
+      "image": "/uploads/1785482190225-Screenshot-2026-07-15-172829-png.png",
+      "description": "Designed chassis, structural components and mechanical assemblies for electric race vehicles with a focus on manufacturability and performance.",
+      "where": "E ZEALL Racing, academic and personal engineering projects.",
+      "notes": "Designed and documented complete chassis assemblies with manufacturing drawings.",
+      "tags": [
+        "Parts",
+        "Assemblies",
+        "Drawings",
+        "Sheet Metal"
+      ]
+    },
+    {
+      "name": "ANSYS",
+      "category": "CAE Analysis",
+      "logo": "AN",
+      "image": "/uploads/1785482265789-WhatsApp-Image-2026-07-16-at-17-23-57-jpeg.jpg",
+      "description": "Performed structural simulations to validate chassis strength and optimize mechanical designs.",
+      "where": "E ZEALL Racing chassis validation.",
+      "notes": "Conducted front, side and rear impact analysis along with deformation and stress evaluation.",
+      "tags": [
+        "Static Structural",
+        "FEA",
+        "Stress",
+        "Deformation",
+        "thermal analysis"
+      ]
+    },
+    {
+      "name": "ROS2",
+      "category": "Robotics",
+      "logo": "R2",
+      "image": "/uploads/1785482309324-WhatsApp-Image-2026-07-24-at-09-49-03-jpeg.jpg",
+      "description": "Learning autonomous robot software development using ROS2, Gazebo and Navigation2.",
+      "where": "YOI Robotics Laboratory and personal robotics projects.",
+      "notes": "Built a differential drive mobile robot simulation with SLAM and autonomous navigation.",
+      "tags": [
+        "ROS2",
+        "Gazebo",
+        "RViz",
+        "Navigation2"
+      ]
+    },
+    {
+      "name": "FDM / 3D Printing",
+      "category": "Additive Manufacturing",
+      "logo": "FD",
+      "image": "/uploads/1785488434341-Screenshot-2026-07-31-142715-png.png",
+      "description": "Optimized FDM printing parameters to improve dimensional accuracy, print quality and material efficiency.",
+      "where": "Research on process parameter optimization using Hyper PLA.",
+      "notes": "Analyzed layer height, infill density, nozzle temperature and print speed to improve print quality.",
+      "tags": [
+        "FDM",
+        "Hyper PLA",
+        "Process Optimization",
+        "3D Printing"
+      ]
+    },
+    {
+      "name": "MATLAB simulink and simscape",
+      "category": "Engineering Computing",
+      "logo": "PY",
+      "image": "/uploads/1785489087269-WhatsApp-Image-2026-07-31-at-14-40-39-jpeg.jpg",
+      "description": "Applied programming and simulation tools for engineering analysis, robotics and research.",
+      "where": "Research work, ROS2 learning and engineering computation.",
+      "notes": "Used MATLAB for system modelling and Python for robotics and automation development.",
+      "tags": [
+        "MATLAB",
+        "Simscape Simulation",
+        "Simulink circuit"
+      ]
+    }
+  ],
+  "protosem": [
+    {
+      "week": "00",
+      "objectives": "Understand the Protosem programme, learn about the team, and begin self-reflection through personality and motivation activities.",
+      "work": "Participated in the kickoff session, completed the 16Personalities test, explored a relevant comic from Zen Pencils, and discussed the upcoming 20-week journey.",
+      "challenge": "Getting familiar with the programme structure and understanding how to connect personal strengths with team goals.",
+      "solution": "Used the personality test and comic reflection to better understand my behavior, motivations, and growth areas, while staying excited about the upcoming work.",
+      "hours": "25",
+      "skills": [
+        "Self-awareness",
+        "Team introduction",
+        "Reflection"
+      ],
+      "mentor": "Programme orientation",
+      "reflection": "I discovered that I am an protagonist and that my strengths include leadership, reflection, and a desire to help others. This helped me understand my personality better and how I may contribute to the team.",
+      "next": "Prepare to engage actively in the coming weeks and build consistency in my learning and teamwork.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "week": "01",
+      "objectives": "Learn workplace ethics and apply 5S principles in a practical lab environment.",
+      "work": "Attended an orientation on workplace management and ethics, learned the 5S concepts of Sort, Set in order, Shine, Standardize, and Sustain, and worked with the Electronics team to organize tools and equipment over three days.",
+      "challenge": "Organizing a shared workspace efficiently while maintaining discipline, teamwork, and professionalism.",
+      "solution": "Applied the 5S principles to classify, remove unnecessary items, and create a structured system for storing tools so they were easier to find and use.",
+      "hours": "20",
+      "skills": [
+        "5S",
+        "Workplace ethics",
+        "Team collaboration"
+      ],
+      "mentor": "Lab team mentor and workplace orientation",
+      "reflection": "The 5S activity was a valuable lesson in discipline and teamwork. It taught me how small organized habits can improve efficiency and create a better working environment.",
+      "next": "Continue building strong professional habits and apply structured thinking to upcoming projects and portfolio work.",
+      "photos": [],
+      "documents": []
+    }
+  ],
+  "contact": {
+    "heading": "Let’s build something that has to work.",
+    "message": "For mechanical design, robotics, research collaboration or a product problem worth solving, I would be glad to connect."
+  }
+}
