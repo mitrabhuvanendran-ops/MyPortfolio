@@ -341,7 +341,6 @@
       ],
       "mentor": "Programme orientation",
       "reflection": "I discovered that I am an protagonist and that my strengths include leadership, reflection, and a desire to help others. This helped me understand my personality better and how I may contribute to the team.",
-      "next": "Prepare to engage actively in the coming weeks and build consistency in my learning and teamwork.",
       "photos": [],
       "documents": []
     },
@@ -359,7 +358,24 @@
       ],
       "mentor": "Lab team mentor and workplace orientation",
       "reflection": "The 5S activity was a valuable lesson in discipline and teamwork. It taught me how small organized habits can improve efficiency and create a better working environment.",
-      "next": "Continue building strong professional habits and apply structured thinking to upcoming projects and portfolio work.",
+      "photos": [],
+      "documents": []
+    },
+    {
+      "week": "02",
+      "objectives": "Learn algorithm creation and flowchart for that algorithm,app creation basics and logics.",
+      "work": "attended lean shark session, did think like a coder problems,scratch game creation,created app in mit app inventor,attended design thinking session",
+      "challenge": "learning coding logics and working in MIT app inventor.",
+      "solution": "using basic coding logics by learning it from basics and try to learn the creation of app interface slowly ",
+      "hours": "20",
+      "skills": [
+        "algorithm and flowchart creation",
+        "creating basic logics for app",
+        "design thinking"
+      ],
+      "mentor": "Gowrishankar,Harris,Naveen,Meera",
+      "reflection": "started to understand basic logics for coding and app development frontend,backend basic logic",
+    
       "photos": [],
       "documents": []
     }
