@@ -16,9 +16,10 @@
       .iot-card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; }
       .iot-card h2 { margin:6px 0 10px; font-size:1.3rem; }
       .iot-card h3 { margin:24px 0 8px; color:var(--blue); font-size:1rem; }
-      .iot-card p { color:var(--muted); }
+      .iot-card p, .iot-card li { color:var(--muted); }
       .iot-card summary { cursor:pointer; color:var(--text); font-weight:700; margin-top:20px; }
       .iot-code { overflow:auto; padding:16px; border-radius:12px; background:#050507; color:#dbeafe; font:12px/1.55 var(--mono); white-space:pre; }
+      .iot-warning { margin-top:18px; padding:14px; border-left:3px solid #f59e0b; border-radius:8px; background:rgba(245,158,11,.1); color:#fde68a; }
       .photo-box { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:14px; }
       .photo-slot { min-height:90px; border:1px dashed #3f3f46; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:var(--muted); text-align:center; padding:10px; }
       .photo-slot img { max-width:100%; max-height:150px; border-radius:8px; object-fit:cover; }
@@ -34,11 +35,11 @@
       <section class="iot-hero">
         <div class="eyebrow">IoT Session · ESP32 · Cloud Systems</div>
         <h1>From local GPIO control to a full-stack smart home.</h1>
-        <p>This page documents four connected IoT tasks. Open each task to read its overview, learning outcomes and implementation details. Photos can be added to every task separately, while the shared Drive button is provided for videos and larger files.</p>
+        <p>This page documents the four IoT tasks with the supplied source code, detailed explanations, implementation steps, hardware, software, system architecture and photo spaces.</p>
         <div class="iot-actions"><a class="button primary" href="https://drive.google.com/" target="_blank" rel="noreferrer">Open Drive for videos</a><a class="button" href="/">Back to portfolio</a></div>
       </section>
       <section id="iot-tasks" class="iot-grid" aria-label="IoT tasks"></section>
-      <section class="video-box"><h2>Photos &amp; video walkthrough</h2><p>Use the photo slots inside each task for task-specific images. Upload videos to one Google Drive folder and use the common button above to open it.</p><a class="button" href="https://drive.google.com/" target="_blank" rel="noreferrer">Open shared Google Drive</a></section>
+      <section class="video-box"><h2>Photos &amp; video walkthrough</h2><p>Add task-specific photos using the slots inside each task. Upload all videos to one Google Drive folder and use the common button above to open it. Replace the placeholder Drive URL in <code>iot-session.html</code> with your shared folder link.</p><a class="button" href="https://drive.google.com/" target="_blank" rel="noreferrer">Open shared Google Drive</a></section>
     </main>
     <script src="/iot-session.js"></script>
   </body>
