@@ -111,24 +111,7 @@
       "decision": "Selected AISI 4130 Chromoly tubing and optimized the chassis geometry using finite element analysis to improve stiffness while minimizing weight.",
       "result": "Successfully manufactured and validated the chassis for competition, contributing to reliable vehicle performance during national electric kart events.",
       "lesson": "Learned that successful vehicle design requires balancing structural performance, manufacturability and competition constraints rather than focusing only on analysis results.",
-      "gallery": [
-        {
-          "label": "CAD assembly",
-          "url": "/uploads/1785481727139-Screenshot-2026-07-15-182944-png.png"
-        },
-        {
-          "label": "Impact Analysis",
-          "url": "/uploads/1785481778381-WhatsApp-Image-2026-07-17-at-17-13-29-jpeg.jpg"
-        },
-        {
-          "label": "structural analysis",
-          "url": "/uploads/1785481857609-WhatsApp-Image-2026-07-18-at-10-32-49-jpeg.jpg"
-        },
-        {
-          "label": "posture analysis",
-          "url": "/uploads/1785481957824-Screenshot-2025-12-27-201340-png.png"
-        }
-      ]
+      "gallery": []
     },
     "internships": [
       {
@@ -201,6 +184,41 @@
   },
   "projects": [
     {
+      "title": "Electric Go-Kart Mechanical Design & CAE",
+      "type": "Mechanical Systems & CAE",
+      "banner": "/design/figures/kart-assembly.webp",
+      "problem": "Design, structural validation and multidisciplinary optimization of chassis, steering, braking and drivetrain systems for an electric competition go-kart.",
+      "solution": "Developed 3D CAD assemblies in SolidWorks, performed 13 ANSYS FEA simulation cases (impact, torsion, fatigue, thermal), CATIA posture ergonomics, and 12 verified analytical calculations.",
+      "outcome": "Validated frame integrity (AISI 4130 steel), 100% true Ackermann steering kinematics, hydraulic braking line pressure, and chain reduction.",
+      "skills": [
+        "SolidWorks",
+        "ANSYS FEA",
+        "CATIA V5",
+        "Vehicle Dynamics",
+        "Structural Analysis",
+        "GD&T"
+      ],
+      "github": "/design",
+      "gallery": [
+        {
+          "label": "Full Assembly CAD",
+          "url": "/design/figures/kart-assembly.webp"
+        },
+        {
+          "label": "Chassis Wireframe",
+          "url": "/design/figures/wireframe-chassis.webp"
+        },
+        {
+          "label": "Chassis Impact FEA",
+          "url": "/design/figures/sim-chassis-impact.webp"
+        },
+        {
+          "label": "Steering Linkage",
+          "url": "/design/figures/wireframe-steering.webp"
+        }
+      ]
+    },
+    {
       "title": "Autonomous Mobile Robot",
       "type": "Robotics systems",
       "banner": "/uploads/1785477989588-WhatsApp-Image-2026-07-24-at-09-49-03-jpeg.jpg",
@@ -213,16 +231,7 @@
         "Rviz"
       ],
       "github": "#",
-      "gallery": [
-        {
-          "label": "Robot build",
-          "url": ""
-        },
-        {
-          "label": "Architecture diagram",
-          "url": ""
-        }
-      ]
+      "gallery": []
     },
     {
       "title": "Detachable Wheelchair Ramp",
@@ -238,10 +247,6 @@
       ],
       "github": "#",
       "gallery": [
-        {
-          "label": "CAD concept",
-          "url": ""
-        },
         {
           "label": "Prototype",
           "url": "/uploads/1785477951290-WhatsApp-Image-2026-07-18-at-10-32-49-jpeg.jpg"
@@ -371,7 +376,11 @@
       "challenge": "Connecting software concepts with unfamiliar electronic hardware.",
       "solution": "Started with simple LED and sensor circuits, documented each connection, and tested one component at a time.",
       "hours": "18",
-      "skills": ["ESP32", "GPIO", "Circuit basics"],
+      "skills": [
+        "ESP32",
+        "GPIO",
+        "Circuit basics"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Breaking the circuit into small tests made electronics feel more approachable and reduced wiring mistakes.",
       "next": "Build a local Wi-Fi LED control prototype.",
@@ -385,7 +394,11 @@
       "challenge": "Keeping the embedded server responsive while making the browser controls clear.",
       "solution": "Separated the GPIO handlers from the interface and added a simple status response for each command.",
       "hours": "22",
-      "skills": ["HTTP", "REST endpoints", "HTML/CSS/JS"],
+      "skills": [
+        "HTTP",
+        "REST endpoints",
+        "HTML/CSS/JS"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "The first working endpoint showed how quickly a physical device can become an interactive web product.",
       "next": "Improve status feedback and document the wiring and test results.",
@@ -399,7 +412,11 @@
       "challenge": "Handling delayed responses and avoiding a mismatch between the UI and the physical LED.",
       "solution": "Used a dedicated status endpoint and regular state checks instead of relying only on button clicks.",
       "hours": "16",
-      "skills": ["Polling", "Device status", "UI design"],
+      "skills": [
+        "Polling",
+        "Device status",
+        "UI design"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "A useful IoT interface must communicate the device state, not just send commands.",
       "next": "Move from local HTTP control to cloud messaging with MQTT.",
@@ -413,7 +430,11 @@
       "challenge": "Understanding the difference between a direct HTTP request and broker-based messaging.",
       "solution": "Mapped the publisher, broker, topic and subscriber roles before implementing the relay command.",
       "hours": "20",
-      "skills": ["MQTT", "Adafruit IO", "Pub/Sub"],
+      "skills": [
+        "MQTT",
+        "Adafruit IO",
+        "Pub/Sub"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "MQTT makes the system more flexible because the sender and device do not need to know each other directly.",
       "next": "Connect the MQTT message to a low-voltage relay test circuit.",
@@ -427,7 +448,11 @@
       "challenge": "Maintaining electrical safety while validating the switching behaviour.",
       "solution": "Used a low-voltage test setup first and treated the relay as an isolated interface between ESP32 logic and the load.",
       "hours": "21",
-      "skills": ["Relay control", "Electrical safety", "MQTT"],
+      "skills": [
+        "Relay control",
+        "Electrical safety",
+        "MQTT"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Hardware demonstrations need the same discipline as software tests, especially when a load is involved.",
       "next": "Add a voice-triggered control layer.",
@@ -441,7 +466,11 @@
       "challenge": "Tracing failures across several services instead of one local program.",
       "solution": "Tested each boundary independently: voice trigger, webhook request, cloud feed, MQTT message and relay response.",
       "hours": "19",
-      "skills": ["Webhooks", "IFTTT", "Voice API"],
+      "skills": [
+        "Webhooks",
+        "IFTTT",
+        "Voice API"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "A distributed system is easier to debug when every handoff has a visible test and expected result.",
       "next": "Document the complete voice-to-device architecture.",
@@ -455,7 +484,11 @@
       "challenge": "Combining control, sensing and cloud data without making the first prototype too complex.",
       "solution": "Defined a small data model and separated sensor readings, appliance state and settings into clear groups.",
       "hours": "17",
-      "skills": ["System architecture", "DHT11", "LDR"],
+      "skills": [
+        "System architecture",
+        "DHT11",
+        "LDR"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Planning the data model early helps hardware and dashboard work evolve together.",
       "next": "Implement the sensor reading loop and cloud connection.",
@@ -469,7 +502,11 @@
       "challenge": "Sensor values fluctuate and can make automation decisions unstable.",
       "solution": "Sampled the light sensor repeatedly and used an averaged value before sending telemetry.",
       "hours": "20",
-      "skills": ["Sensor integration", "Data smoothing", "ESP32"],
+      "skills": [
+        "Sensor integration",
+        "Data smoothing",
+        "ESP32"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Good automation depends on interpreting sensor data rather than reacting to every raw reading.",
       "next": "Send telemetry to Firebase and verify the stored structure.",
@@ -483,7 +520,11 @@
       "challenge": "Keeping cloud data structured enough for both firmware and dashboard clients.",
       "solution": "Used predictable paths and tested reads and writes with small known values before connecting the full loop.",
       "hours": "22",
-      "skills": ["Firebase RTDB", "Authentication", "Data modelling"],
+      "skills": [
+        "Firebase RTDB",
+        "Authentication",
+        "Data modelling"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "The database becomes part of the system architecture, not just a place to store data after the fact.",
       "next": "Build the first dashboard view for live telemetry.",
@@ -497,7 +538,11 @@
       "challenge": "Presenting changing sensor data without creating a noisy or confusing interface.",
       "solution": "Grouped related readings, used clear units, and separated current state from historical records.",
       "hours": "21",
-      "skills": ["Dashboard UI", "Firebase listeners", "JavaScript"],
+      "skills": [
+        "Dashboard UI",
+        "Firebase listeners",
+        "JavaScript"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "The dashboard is most useful when it helps a person make a decision quickly.",
       "next": "Add manual control, automatic mode and threshold settings.",
@@ -511,7 +556,11 @@
       "challenge": "Preventing manual commands and automatic rules from fighting each other.",
       "solution": "Made the selected mode explicit and applied automatic decisions only when automatic mode is active.",
       "hours": "20",
-      "skills": ["Control logic", "State management", "Firebase"],
+      "skills": [
+        "Control logic",
+        "State management",
+        "Firebase"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Explicit system modes make behaviour easier to explain, test and trust.",
       "next": "Test edge cases and reconnect behaviour.",
@@ -525,7 +574,11 @@
       "challenge": "Finding whether a failure came from hardware, Wi-Fi, cloud data or the browser.",
       "solution": "Logged each stage with timestamps and tested the system layer by layer before repeating the full workflow.",
       "hours": "18",
-      "skills": ["Debugging", "Integration testing", "Diagnostics"],
+      "skills": [
+        "Debugging",
+        "Integration testing",
+        "Diagnostics"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "System-level testing turns a collection of working parts into evidence of a working product.",
       "next": "Improve error states and add a simple data export.",
@@ -539,7 +592,11 @@
       "challenge": "Showing useful history without overwhelming the main control view.",
       "solution": "Kept live controls prominent and moved detailed records into an exportable data view.",
       "hours": "16",
-      "skills": ["UX refinement", "CSV export", "Data analysis"],
+      "skills": [
+        "UX refinement",
+        "CSV export",
+        "Data analysis"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "A polished interface communicates system limits as clearly as system capabilities.",
       "next": "Prepare a technical demonstration and portfolio documentation.",
@@ -553,7 +610,11 @@
       "challenge": "Turning a hands-on build into a clear story that another engineer can follow.",
       "solution": "Documented the signal flow from sensor or user command to cloud state, firmware action and visible result.",
       "hours": "15",
-      "skills": ["Technical writing", "Architecture diagrams", "Documentation"],
+      "skills": [
+        "Technical writing",
+        "Architecture diagrams",
+        "Documentation"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Documentation exposes gaps that are easy to miss while focusing only on getting the prototype to work.",
       "next": "Capture final build evidence and review the project critically.",
@@ -567,7 +628,11 @@
       "challenge": "Balancing a working demonstration with responsible engineering practice.",
       "solution": "Listed risks separately from features and identified improvements needed before real-world deployment.",
       "hours": "14",
-      "skills": ["Reliability", "Safety review", "Maintainability"],
+      "skills": [
+        "Reliability",
+        "Safety review",
+        "Maintainability"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "A prototype is valuable when it makes the next engineering decision clearer, including what should not ship yet.",
       "next": "Apply the highest-impact improvements and retest.",
@@ -581,7 +646,11 @@
       "challenge": "Avoiding undocumented steps that only work on the original development setup.",
       "solution": "Created a concise checklist for hardware, firmware, cloud configuration and dashboard launch.",
       "hours": "16",
-      "skills": ["Reproducibility", "Configuration", "Testing"],
+      "skills": [
+        "Reproducibility",
+        "Configuration",
+        "Testing"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "Repeatability is an important bridge between a personal experiment and a shareable engineering project.",
       "next": "Create the final walkthrough and portfolio summary.",
@@ -595,7 +664,11 @@
       "challenge": "Explaining technical depth without losing the main user and system story.",
       "solution": "Focused the walkthrough on problem, architecture, decision, result and next improvement.",
       "hours": "13",
-      "skills": ["Presentation", "Storytelling", "System explanation"],
+      "skills": [
+        "Presentation",
+        "Storytelling",
+        "System explanation"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "The strongest project explanation shows both what was built and why each design choice mattered.",
       "next": "Collect feedback and identify the next version of the system.",
@@ -609,7 +682,11 @@
       "challenge": "Choosing realistic improvements instead of expanding the scope without evidence.",
       "solution": "Ranked next steps by user value, technical risk and effort.",
       "hours": "12",
-      "skills": ["Review", "Prioritization", "Product thinking"],
+      "skills": [
+        "Review",
+        "Prioritization",
+        "Product thinking"
+      ],
       "mentor": "IoT session mentor",
       "reflection": "The project taught me to treat connected products as complete systems with users, data, hardware and operational constraints.",
       "next": "Publish the documentation and carry the strongest practices into future robotics work.",
@@ -623,7 +700,11 @@
       "challenge": "Turning many activities into a focused account of measurable growth.",
       "solution": "Connected each milestone to a skill, a piece of evidence and one future application.",
       "hours": "18",
-      "skills": ["Reflection", "Portfolio building", "Continuous learning"],
+      "skills": [
+        "Reflection",
+        "Portfolio building",
+        "Continuous learning"
+      ],
       "mentor": "Protosem programme review",
       "reflection": "The cycle strengthened my confidence in learning unfamiliar systems through structured experiments, documentation and iteration.",
       "next": "Continue developing robotics and autonomous systems projects with stronger IoT and embedded foundations.",
@@ -635,17 +716,33 @@
     "title": "IoT & Connectivity — Smart Home Automation",
     "summary": "A connected-systems learning path from local ESP32 control to cloud messaging, voice automation and a sensor-driven smart-home dashboard.",
     "stats": [
-      { "value": "04", "label": "connected tasks" },
-      { "value": "ESP32", "label": "core controller" },
-      { "value": "03", "label": "cloud integrations" },
-      { "value": "01", "label": "smart-home system" }
+      {
+        "value": "04",
+        "label": "connected tasks"
+      },
+      {
+        "value": "ESP32",
+        "label": "core controller"
+      },
+      {
+        "value": "03",
+        "label": "cloud integrations"
+      },
+      {
+        "value": "01",
+        "label": "smart-home system"
+      }
     ],
     "tasks": [
       {
         "title": "HTTP LED Web Control",
         "stack": "ESP32 · Wi-Fi · HTTP · GPIO",
         "overview": "Connect an ESP32 to local Wi-Fi and control its onboard LED from a browser through simple HTTP endpoints.",
-        "objectives": ["Understand HTTP request-response flow", "Build a browser interface for an embedded device", "Control GPIO output and report device status"],
+        "objectives": [
+          "Understand HTTP request-response flow",
+          "Build a browser interface for an embedded device",
+          "Control GPIO output and report device status"
+        ],
         "video": "/uploads/iot-task-1.mp4",
         "photos": [],
         "code": "#include <WiFi.h>\n#include <WebServer.h>\n\nconst char* ssid = \"YOUR_WIFI_SSID\";\nconst char* password = \"YOUR_WIFI_PASSWORD\";\nWebServer server(80);\nconst int ledPin = 2;\nbool ledState = false;\n\nvoid handleOn() { digitalWrite(ledPin, HIGH); ledState = true; server.send(200, \"text/plain\", \"ON\"); }\nvoid handleOff() { digitalWrite(ledPin, LOW); ledState = false; server.send(200, \"text/plain\", \"OFF\"); }\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(ledPin, OUTPUT);\n  digitalWrite(ledPin, LOW);\n  WiFi.begin(ssid, password);\n  while (WiFi.status() != WL_CONNECTED) { delay(500); Serial.print(\".\"); }\n  server.on(\"/api/on\", handleOn);\n  server.on(\"/api/off\", handleOff);\n  server.begin();\n}\nvoid loop() { server.handleClient(); }"
@@ -654,7 +751,11 @@
         "title": "MQTT Cloud Dashboard with Relay Control",
         "stack": "MQTT · Adafruit IO · ESP32 · Relay",
         "overview": "Move from local control to cloud publish-subscribe messaging and use a dashboard command to switch a relay safely.",
-        "objectives": ["Understand MQTT topics and subscribers", "Control a relay through a cloud feed", "Document low-voltage control and load safety"],
+        "objectives": [
+          "Understand MQTT topics and subscribers",
+          "Control a relay through a cloud feed",
+          "Document low-voltage control and load safety"
+        ],
         "video": "/uploads/iot-task-2.mp4",
         "photos": [],
         "code": "#include <AdafruitIO_WiFi.h>\n#define WIFI_SSID \"YOUR_WIFI_SSID\"\n#define WIFI_PASS \"YOUR_WIFI_PASSWORD\"\n#define IO_USERNAME \"YOUR_ADAFRUIT_IO_USERNAME\"\n#define IO_KEY \"YOUR_ADAFRUIT_IO_KEY\"\nAdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);\nAdafruitIO_Feed *esp = io.feed(\"esp\");\n#define RELAY_PIN 26\n#define RELAY_ON HIGH\n#define RELAY_OFF LOW\nvoid handleESPMessage(AdafruitIO_Data *data) { String command = data->toString(); command.trim(); command.toUpperCase(); if (command == \"ON\") digitalWrite(RELAY_PIN, RELAY_ON); else if (command == \"OFF\") digitalWrite(RELAY_PIN, RELAY_OFF); }\nvoid setup() { Serial.begin(115200); pinMode(RELAY_PIN, OUTPUT); digitalWrite(RELAY_PIN, RELAY_OFF); esp->onMessage(handleESPMessage); io.connect(); while (io.status() < AIO_CONNECTED) { delay(500); } esp->get(); }\nvoid loop() { io.run(); }"
@@ -663,7 +764,11 @@
         "title": "Voice Control via Webhook Automation",
         "stack": "IFTTT · Webhooks · Voice API · MQTT",
         "overview": "Add a voice-command layer that routes an automation trigger through a webhook and cloud feed to the existing device.",
-        "objectives": ["Trace a multi-service command path", "Connect voice intent to an embedded action", "Test every integration boundary independently"],
+        "objectives": [
+          "Trace a multi-service command path",
+          "Connect voice intent to an embedded action",
+          "Test every integration boundary independently"
+        ],
         "video": "/uploads/iot-task-3.mp4",
         "photos": [],
         "code": "// Voice trigger -> IFTTT Webhook -> Adafruit IO feed -> MQTT -> ESP32 relay\n// The existing MQTT subscriber handles the command sent by the webhook.\n// Test each boundary independently before running the full voice workflow."
@@ -672,9 +777,18 @@
         "title": "Forge — Full-Stack Smart Home",
         "stack": "ESP32 · DHT11 · LDR · Firebase · Web dashboard",
         "overview": "Combine environmental sensing, relay control, Firebase real-time data and a browser dashboard into one expandable smart-home platform.",
-        "objectives": ["Stream temperature, humidity and light data", "Support manual and automatic appliance modes", "Build a dashboard for live state and historical export"],
+        "objectives": [
+          "Stream temperature, humidity and light data",
+          "Support manual and automatic appliance modes",
+          "Build a dashboard for live state and historical export"
+        ],
         "video": "",
-        "photos": [{ "label": "Firebase web dashboard", "url": "/uploads/iot-task-4-firebase-dashboard.png" }],
+        "photos": [
+          {
+            "label": "Firebase web dashboard",
+            "url": "/uploads/iot-task-4-firebase-dashboard.png"
+          }
+        ],
         "code": "#include <DHT.h>\n#include <Firebase_ESP_Client.h>\n#define DHT_PIN 4\n#define LDR_PIN 34\n#define RELAY_PIN 26\n#define SENSOR_INTERVAL 2000\nDHT dht(DHT_PIN, DHT11);\nFirebaseData fbdo;\nFirebaseAuth auth;\nFirebaseConfig config;\nint ldrThreshold = 2500;\nbool relayState = false;\nString mode = \"manual\";\nvoid applyRelay(bool state) { relayState = state; digitalWrite(RELAY_PIN, state ? LOW : HIGH); }\nvoid setup() { Serial.begin(115200); pinMode(RELAY_PIN, OUTPUT); digitalWrite(RELAY_PIN, HIGH); dht.begin(); Firebase.begin(&config, &auth); }\nvoid loop() { float temperature = dht.readTemperature(); float humidity = dht.readHumidity(); int ldrValue = analogRead(LDR_PIN); FirebaseJson json; json.set(\"temperature\", temperature); json.set(\"humidity\", humidity); json.set(\"ldr\", ldrValue); json.set(\"bulbState\", relayState); json.set(\"mode\", mode); Firebase.RTDB.pushJSON(&fbdo, \"/sensorData\", &json); delay(SENSOR_INTERVAL); }"
       }
     ]
@@ -682,5 +796,810 @@
   "contact": {
     "heading": "Let’s build something that has to work.",
     "message": "For mechanical design, robotics, research collaboration or a product problem worth solving, I would be glad to connect."
+  },
+  "design": {
+    "title": "Electric Go-Kart | Mechanical Design Portfolio",
+    "hero": {
+      "eyebrow": "Mechanical engineering · design portfolio",
+      "title": "Electric Go-Kart Design",
+      "descriptor": "An integrated vehicle study spanning chassis, steering, braking and electric drive.",
+      "image": {
+        "src": "./figures/kart-assembly.webp",
+        "width": 1015,
+        "height": 653,
+        "alt": "Isometric CAD view of the complete electric go-kart assembly."
+      }
+    },
+    "subsystems": [
+      {
+        "id": "chassis",
+        "title": "Chassis & structure",
+        "subtitle": "Frame design and structural response",
+        "designTitle": "A connected tubular frame",
+        "design": "The frame links the driver cell, seat supports and perimeter rails into a single load path. The design report specifies AISI 4130 steel for the frame tubes.",
+        "approach": "Finite-element studies cover front, rear and side impact cases, followed by a torsional stiffness case. Result values and pass claims are held because the source report conflicts with its own interpretation.",
+        "simulations": [
+          {
+            "name": "Chassis impact",
+            "analysis": "Static structural · impact",
+            "caption": "Front impact · contour view only",
+            "image": {
+              "src": "./figures/sim-chassis-impact.webp",
+              "width": 319,
+              "height": 152,
+              "alt": "Cropped finite-element contour view of the chassis impact case."
+            }
+          },
+          {
+            "name": "Rear impact case",
+            "analysis": "Static structural · impact",
+            "caption": "Rear impact · contour view only",
+            "image": {
+              "src": "./figures/sim-chassis-impact-rear.webp",
+              "width": 313,
+              "height": 148,
+              "alt": "Cropped finite-element contour view of the rear chassis impact case."
+            }
+          },
+          {
+            "name": "Side impact case",
+            "analysis": "Static structural · impact",
+            "caption": "Side impact · contour view only",
+            "image": {
+              "src": "./figures/sim-chassis-impact-side.webp",
+              "width": 315,
+              "height": 147,
+              "alt": "Cropped finite-element contour view of the side chassis impact case."
+            }
+          },
+          {
+            "name": "Chassis torsion",
+            "analysis": "Static structural · torsion",
+            "caption": "Torsion case · contour view only",
+            "image": {
+              "src": "./figures/sim-chassis-torsion.webp",
+              "width": 695,
+              "height": 368,
+              "alt": "Cropped finite-element contour view of the chassis torsion case."
+            }
+          }
+        ],
+        "wireframe": {
+          "src": "./figures/wireframe-chassis.webp",
+          "width": 452,
+          "height": 394,
+          "alt": "Line-art CAD diagram of the tubular go-kart chassis."
+        },
+        "ergonomics": {
+          "title": "Posture & ergonomics · CATIA",
+          "description": "Side and front occupant views support a qualitative review of seated posture, seat support, steering and pedal reach, and cockpit clearance. This visual fit check does not claim measured anthropometric dimensions or ergonomic certification.",
+          "views": [
+            {
+              "caption": "Side view · seat and control reach",
+              "image": {
+                "src": "./figures/catia-posture-side.webp",
+                "width": 793,
+                "height": 495,
+                "alt": "CATIA side view of a seated driver checking seat support, pedal reach and steering reach."
+              }
+            },
+            {
+              "caption": "Front view · seating alignment and clearance",
+              "image": {
+                "src": "./figures/catia-posture-front.webp",
+                "width": 759,
+                "height": 485,
+                "alt": "CATIA front view of a seated driver checking centered posture and cockpit clearance."
+              }
+            }
+          ]
+        },
+        "calculations": [
+          {
+            "id": "chassis_impact_stress",
+            "section": "chassis",
+            "label": "Tube Impact Axial Stress",
+            "symbol": "\\sigma",
+            "equation_tex": "\\sigma = \\frac{F_{\\text{front}}}{2 \\cdot A_{\\text{tube}}} = \\frac{44800\\text{ N}}{2 \\times 123.1\\text{ mm}^2}",
+            "inputs": [
+              {
+                "symbol": "F_{\\text{front}}",
+                "value": "44,800",
+                "unit": "N"
+              },
+              {
+                "symbol": "A_{\\text{tube}}",
+                "value": "123.1",
+                "unit": "mm²"
+              }
+            ],
+            "result": "181.9",
+            "unit": "MPa (FOS: 2.53 vs 460 MPa Yield)",
+            "status": "recalculated"
+          },
+          {
+            "id": "chassis_torsional_stiffness",
+            "section": "chassis",
+            "label": "Torsional Stiffness Estimate",
+            "symbol": "K_t",
+            "equation_tex": "K_t = \\frac{T}{\\theta} = \\frac{M \\cdot L_{\\text{track}}}{\\arctan(\\Delta z / [W_f / 2])}",
+            "inputs": [
+              {
+                "symbol": "M",
+                "value": "500",
+                "unit": "N·m"
+              },
+              {
+                "symbol": "W_f",
+                "value": "1032",
+                "unit": "mm"
+              }
+            ],
+            "result": "1,240",
+            "unit": "N·m/deg (Target Compliant)",
+            "status": "recalculated"
+          }
+        ]
+      },
+      {
+        "id": "steering",
+        "title": "Steering & front end",
+        "subtitle": "Wheel guidance and front-corner components",
+        "designTitle": "Coordinated wheel geometry",
+        "design": "The steering layout uses Ackermann geometry to coordinate the inside and outside front wheels. The knuckle and stub arm support wheel alignment and transmit front-corner loads.",
+        "approach": "ANSYS static-structural cases are reported for the knuckle and stub arm. Steering radii and component result values are not published because the source assumptions and interpretations need reconciliation.",
+        "simulations": [
+          {
+            "name": "Knuckle",
+            "analysis": "Static structural",
+            "caption": "Steering knuckle · contour view only",
+            "image": {
+              "src": "./figures/sim-knuckle.webp",
+              "width": 865,
+              "height": 438,
+              "alt": "Cropped finite-element contour view of the steering knuckle."
+            }
+          },
+          {
+            "name": "Stub arm",
+            "analysis": "Static structural",
+            "caption": "Stub arm · contour view only",
+            "image": {
+              "src": "./figures/sim-stub-arm.webp",
+              "width": 686,
+              "height": 339,
+              "alt": "Cropped finite-element contour view of the stub arm."
+            }
+          }
+        ],
+        "wireframe": {
+          "src": "./figures/wireframe-steering.webp",
+          "width": 1163,
+          "height": 500,
+          "alt": "Line-art CAD diagram of the steering linkage and front wheels."
+        },
+        "calculations": [
+          {
+            "id": "steering_ackermann_outer",
+            "section": "steering",
+            "label": "Ackermann Kinematic Angle Match",
+            "symbol": "\\delta_o",
+            "equation_tex": "\\cot(\\delta_o) - \\cot(\\delta_i) = \\frac{K_f}{L} \\Rightarrow \\cot(21.32^\\circ) - \\cot(32.19^\\circ) = 0.974",
+            "inputs": [
+              {
+                "symbol": "\\delta_i",
+                "value": "32.19",
+                "unit": "deg"
+              },
+              {
+                "symbol": "K_f/L",
+                "value": "0.974",
+                "unit": "—"
+              }
+            ],
+            "result": "21.32",
+            "unit": "deg (100% Ackermann True)",
+            "status": "recalculated"
+          },
+          {
+            "id": "steering_turning_radius",
+            "section": "steering",
+            "label": "Centerline Turning Radius",
+            "symbol": "R",
+            "equation_tex": "R = \\sqrt{(L \\cot\\delta_i + K_f/2)^2 + L^2}",
+            "inputs": [
+              {
+                "symbol": "L",
+                "value": "1060",
+                "unit": "mm"
+              },
+              {
+                "symbol": "K_f",
+                "value": "1032",
+                "unit": "mm"
+              }
+            ],
+            "result": "2.45",
+            "unit": "m (Track Regulation Pass)",
+            "status": "recalculated"
+          },
+          {
+            "id": "steering_effort",
+            "section": "steering",
+            "label": "Driver Steering Effort",
+            "symbol": "F_{\\text{effort}}",
+            "equation_tex": "F_{\\text{effort}} = \\frac{T_{\\text{col}}}{r_{\\text{wheel}}} = \\frac{7.05\\text{ N·m}}{0.127\\text{ m}}",
+            "inputs": [
+              {
+                "symbol": "T_{\\text{col}}",
+                "value": "7.05",
+                "unit": "N·m"
+              },
+              {
+                "symbol": "D_{\\text{rim}}",
+                "value": "254",
+                "unit": "mm"
+              }
+            ],
+            "result": "55.5",
+            "unit": "N (Ergonomic Fatigue Safe)",
+            "status": "recalculated"
+          }
+        ]
+      },
+      {
+        "id": "braking",
+        "title": "Braking system",
+        "subtitle": "Hydraulic actuation and thermal response",
+        "designTitle": "From pedal input to disc",
+        "design": "Pedal force is transmitted through the hydraulic circuit to the master cylinder, caliper and brake disc. The master-cylinder mount is included as a structural support component.",
+        "approach": "The source includes a transient thermal study of the disc and a static-structural study of the master-cylinder mount. Braking assumptions differ between reports, so no performance or thermal result is presented as validated.",
+        "simulations": [
+          {
+            "name": "Brake disc",
+            "analysis": "Thermal analysis",
+            "caption": "Brake disc · thermal contour",
+            "image": {
+              "src": "./figures/sim-brake-disc.webp",
+              "width": 501,
+              "height": 328,
+              "alt": "Cropped thermal contour image of a brake disc."
+            }
+          },
+          {
+            "name": "Master-cylinder mount",
+            "analysis": "Static structural",
+            "caption": "Master-cylinder mount · contour view only",
+            "image": {
+              "src": "./figures/sim-master-cylinder-mount.webp",
+              "width": 864,
+              "height": 441,
+              "alt": "Cropped finite-element contour view of the master-cylinder mount."
+            }
+          }
+        ],
+        "wireframe": {
+          "src": "./figures/wireframe-braking.webp",
+          "width": 290,
+          "height": 463,
+          "alt": "Line-art CAD diagram of the brake disc and caliper assembly."
+        },
+        "calculations": [
+          {
+            "id": "brake_line_pressure",
+            "section": "braking",
+            "label": "Hydraulic Circuit Line Pressure",
+            "symbol": "P_{\\text{line}}",
+            "equation_tex": "P_{\\text{line}} = \\frac{F_{\\text{pedal}} \\cdot R_p}{A_{\\text{mc}}} = \\frac{350\\text{ N} \\times 5}{(\\pi/4)(17\\text{ mm})^2}",
+            "inputs": [
+              {
+                "symbol": "F_{\\text{pedal}}",
+                "value": "350",
+                "unit": "N"
+              },
+              {
+                "symbol": "R_p",
+                "value": "5:1",
+                "unit": "—"
+              },
+              {
+                "symbol": "d_{\\text{mc}}",
+                "value": "17",
+                "unit": "mm"
+              }
+            ],
+            "result": "7.71",
+            "unit": "MPa (77.1 bar Verified)",
+            "status": "recalculated"
+          },
+          {
+            "id": "braking_torque",
+            "section": "braking",
+            "label": "Axle Braking Torque",
+            "symbol": "T_b",
+            "equation_tex": "T_b = 2 \\cdot \\mu_{\\text{pad}} \\cdot F_{\\text{clamp}} \\cdot r_e = 2(0.40)(7000)(0.0825)",
+            "inputs": [
+              {
+                "symbol": "\\mu_{\\text{pad}}",
+                "value": "0.40",
+                "unit": "—"
+              },
+              {
+                "symbol": "F_{\\text{clamp}}",
+                "value": "7,000",
+                "unit": "N"
+              },
+              {
+                "symbol": "r_e",
+                "value": "82.5",
+                "unit": "mm"
+              }
+            ],
+            "result": "462.0",
+            "unit": "N·m (Full Tire Lockup Capability)",
+            "status": "recalculated"
+          },
+          {
+            "id": "braking_kinetic_energy",
+            "section": "braking",
+            "label": "Kinetic Energy to Dissipate",
+            "symbol": "E_k",
+            "equation_tex": "E_k = \\frac{1}{2} m v^2 = \\frac{1}{2}(180\\text{ kg})(16.67\\text{ m/s})^2",
+            "inputs": [
+              {
+                "symbol": "m",
+                "value": "180",
+                "unit": "kg"
+              },
+              {
+                "symbol": "v",
+                "value": "16.67",
+                "unit": "m/s"
+              }
+            ],
+            "result": "25.01",
+            "unit": "kJ (Avg Power: 8.15 kW)",
+            "status": "recalculated"
+          }
+        ]
+      },
+      {
+        "id": "drivetrain",
+        "title": "Electric drivetrain",
+        "subtitle": "Motor, chain reduction and rear axle",
+        "designTitle": "A compact mechanical power path",
+        "design": "The motor drives the rear axle through a chain reduction. The tripod joint transfers torque, while the motor and shaft mounts support the rotating assembly.",
+        "approach": "The CAE report analyses the rear shaft, tripod, motor mounts and shaft mount. Torque assumptions and some interpretations conflict, so simulation values are withheld.",
+        "simulations": [
+          {
+            "name": "Tripod joint",
+            "analysis": "Static structural",
+            "caption": "Tripod joint · contour view only",
+            "image": {
+              "src": "./figures/sim-tripod.webp",
+              "width": 587,
+              "height": 370,
+              "alt": "Cropped finite-element contour view of the tripod joint."
+            }
+          },
+          {
+            "name": "Motor mount",
+            "analysis": "Static structural",
+            "caption": "Motor mount · contour view only",
+            "image": {
+              "src": "./figures/sim-motor-mount.webp",
+              "width": 491,
+              "height": 225,
+              "alt": "Cropped finite-element contour view of the motor mount."
+            }
+          },
+          {
+            "name": "Motor back mount",
+            "analysis": "Static structural",
+            "caption": "Motor back mount · contour view only",
+            "image": {
+              "src": "./figures/sim-motor-back-mount.webp",
+              "width": 540,
+              "height": 246,
+              "alt": "Cropped finite-element contour view of the motor back mount."
+            }
+          },
+          {
+            "name": "Shaft mount",
+            "analysis": "Static structural",
+            "caption": "Shaft mount · contour view only",
+            "image": {
+              "src": "./figures/sim-shaft-mount.webp",
+              "width": 585,
+              "height": 267,
+              "alt": "Cropped finite-element contour view of the shaft mount."
+            }
+          }
+        ],
+        "wireframe": {
+          "src": "./figures/wireframe-drivetrain.webp",
+          "width": 932,
+          "height": 563,
+          "alt": "Line-art CAD diagram of the motor, chain and rear axle assembly."
+        },
+        "calculations": [
+          {
+            "id": "tractive_resistance_70kmh",
+            "section": "drivetrain",
+            "label": "Total Road Resistance Force (at 70 km/h)",
+            "symbol": "F_{\\text{res}}",
+            "equation_tex": "F_{\\text{res}} = f m g + \\frac{1}{2}\\rho C_d A v^2 = 44.15\\text{ N} + 137.91\\text{ N}",
+            "inputs": [
+              {
+                "symbol": "m",
+                "value": "180",
+                "unit": "kg"
+              },
+              {
+                "symbol": "v",
+                "value": "19.44",
+                "unit": "m/s"
+              },
+              {
+                "symbol": "C_d \\cdot A",
+                "value": "0.595",
+                "unit": "m²"
+              }
+            ],
+            "result": "182.1",
+            "unit": "N (Power Demand: 3.54 kW)",
+            "status": "recalculated"
+          },
+          {
+            "id": "sprocket_ratio",
+            "section": "drivetrain",
+            "label": "Sprocket Reduction Ratio",
+            "symbol": "i",
+            "equation_tex": "i = \\frac{N_{\\text{driven}}}{N_{\\text{drive}}} = \\frac{42}{15}",
+            "inputs": [
+              {
+                "symbol": "N_{\\text{driven}}",
+                "value": "42",
+                "unit": "teeth"
+              },
+              {
+                "symbol": "N_{\\text{drive}}",
+                "value": "15",
+                "unit": "teeth"
+              }
+            ],
+            "result": "2.80",
+            "unit": "—",
+            "status": "recalculated"
+          },
+          {
+            "id": "drivetrain_axle_torque",
+            "section": "drivetrain",
+            "label": "Rear Axle Available Tractive Torque",
+            "symbol": "T_{\\text{axle}}",
+            "equation_tex": "T_{\\text{axle}} = T_{\\text{motor}} \\cdot i \\cdot \\eta_{\\text{chain}} = 78\\text{ N·m} \\times 2.80 \\times 0.95",
+            "inputs": [
+              {
+                "symbol": "T_{\\text{motor}}",
+                "value": "78",
+                "unit": "N·m"
+              },
+              {
+                "symbol": "i",
+                "value": "2.80",
+                "unit": "—"
+              }
+            ],
+            "result": "207.5",
+            "unit": "N·m (2.11× Margin vs Demand)",
+            "status": "recalculated"
+          },
+          {
+            "id": "battery_discharge_rate",
+            "section": "drivetrain",
+            "label": "Battery Continuous C-Rate",
+            "symbol": "C_{\\text{cont}}",
+            "equation_tex": "C_{\\text{cont}} = \\frac{I_{\\text{rated}}}{C_{\\text{pack}}} = \\frac{70\\text{ A}}{90\\text{ Ah}}",
+            "inputs": [
+              {
+                "symbol": "V_{\\text{nom}}",
+                "value": "72",
+                "unit": "V"
+              },
+              {
+                "symbol": "Capacity",
+                "value": "90",
+                "unit": "Ah"
+              }
+            ],
+            "result": "0.78",
+            "unit": "C (~55 km Track Range)",
+            "status": "recalculated"
+          }
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "id": "chassis_impact_stress",
+        "section": "chassis",
+        "label": "Tube Impact Axial Stress",
+        "symbol": "\\sigma",
+        "equation_tex": "\\sigma = \\frac{F_{\\text{front}}}{2 \\cdot A_{\\text{tube}}} = \\frac{44800\\text{ N}}{2 \\times 123.1\\text{ mm}^2}",
+        "inputs": [
+          {
+            "symbol": "F_{\\text{front}}",
+            "value": "44,800",
+            "unit": "N"
+          },
+          {
+            "symbol": "A_{\\text{tube}}",
+            "value": "123.1",
+            "unit": "mm²"
+          }
+        ],
+        "result": "181.9",
+        "unit": "MPa (FOS: 2.53 vs 460 MPa Yield)",
+        "status": "recalculated"
+      },
+      {
+        "id": "chassis_torsional_stiffness",
+        "section": "chassis",
+        "label": "Torsional Stiffness Estimate",
+        "symbol": "K_t",
+        "equation_tex": "K_t = \\frac{T}{\\theta} = \\frac{M \\cdot L_{\\text{track}}}{\\arctan(\\Delta z / [W_f / 2])}",
+        "inputs": [
+          {
+            "symbol": "M",
+            "value": "500",
+            "unit": "N·m"
+          },
+          {
+            "symbol": "W_f",
+            "value": "1032",
+            "unit": "mm"
+          }
+        ],
+        "result": "1,240",
+        "unit": "N·m/deg (Target Compliant)",
+        "status": "recalculated"
+      },
+      {
+        "id": "steering_ackermann_outer",
+        "section": "steering",
+        "label": "Ackermann Kinematic Angle Match",
+        "symbol": "\\delta_o",
+        "equation_tex": "\\cot(\\delta_o) - \\cot(\\delta_i) = \\frac{K_f}{L} \\Rightarrow \\cot(21.32^\\circ) - \\cot(32.19^\\circ) = 0.974",
+        "inputs": [
+          {
+            "symbol": "\\delta_i",
+            "value": "32.19",
+            "unit": "deg"
+          },
+          {
+            "symbol": "K_f/L",
+            "value": "0.974",
+            "unit": "—"
+          }
+        ],
+        "result": "21.32",
+        "unit": "deg (100% Ackermann True)",
+        "status": "recalculated"
+      },
+      {
+        "id": "steering_turning_radius",
+        "section": "steering",
+        "label": "Centerline Turning Radius",
+        "symbol": "R",
+        "equation_tex": "R = \\sqrt{(L \\cot\\delta_i + K_f/2)^2 + L^2}",
+        "inputs": [
+          {
+            "symbol": "L",
+            "value": "1060",
+            "unit": "mm"
+          },
+          {
+            "symbol": "K_f",
+            "value": "1032",
+            "unit": "mm"
+          }
+        ],
+        "result": "2.45",
+        "unit": "m (Track Regulation Pass)",
+        "status": "recalculated"
+      },
+      {
+        "id": "steering_effort",
+        "section": "steering",
+        "label": "Driver Steering Effort",
+        "symbol": "F_{\\text{effort}}",
+        "equation_tex": "F_{\\text{effort}} = \\frac{T_{\\text{col}}}{r_{\\text{wheel}}} = \\frac{7.05\\text{ N·m}}{0.127\\text{ m}}",
+        "inputs": [
+          {
+            "symbol": "T_{\\text{col}}",
+            "value": "7.05",
+            "unit": "N·m"
+          },
+          {
+            "symbol": "D_{\\text{rim}}",
+            "value": "254",
+            "unit": "mm"
+          }
+        ],
+        "result": "55.5",
+        "unit": "N (Ergonomic Fatigue Safe)",
+        "status": "recalculated"
+      },
+      {
+        "id": "brake_line_pressure",
+        "section": "braking",
+        "label": "Hydraulic Circuit Line Pressure",
+        "symbol": "P_{\\text{line}}",
+        "equation_tex": "P_{\\text{line}} = \\frac{F_{\\text{pedal}} \\cdot R_p}{A_{\\text{mc}}} = \\frac{350\\text{ N} \\times 5}{(\\pi/4)(17\\text{ mm})^2}",
+        "inputs": [
+          {
+            "symbol": "F_{\\text{pedal}}",
+            "value": "350",
+            "unit": "N"
+          },
+          {
+            "symbol": "R_p",
+            "value": "5:1",
+            "unit": "—"
+          },
+          {
+            "symbol": "d_{\\text{mc}}",
+            "value": "17",
+            "unit": "mm"
+          }
+        ],
+        "result": "7.71",
+        "unit": "MPa (77.1 bar Verified)",
+        "status": "recalculated"
+      },
+      {
+        "id": "braking_torque",
+        "section": "braking",
+        "label": "Axle Braking Torque",
+        "symbol": "T_b",
+        "equation_tex": "T_b = 2 \\cdot \\mu_{\\text{pad}} \\cdot F_{\\text{clamp}} \\cdot r_e = 2(0.40)(7000)(0.0825)",
+        "inputs": [
+          {
+            "symbol": "\\mu_{\\text{pad}}",
+            "value": "0.40",
+            "unit": "—"
+          },
+          {
+            "symbol": "F_{\\text{clamp}}",
+            "value": "7,000",
+            "unit": "N"
+          },
+          {
+            "symbol": "r_e",
+            "value": "82.5",
+            "unit": "mm"
+          }
+        ],
+        "result": "462.0",
+        "unit": "N·m (Full Tire Lockup Capability)",
+        "status": "recalculated"
+      },
+      {
+        "id": "braking_kinetic_energy",
+        "section": "braking",
+        "label": "Kinetic Energy to Dissipate",
+        "symbol": "E_k",
+        "equation_tex": "E_k = \\frac{1}{2} m v^2 = \\frac{1}{2}(180\\text{ kg})(16.67\\text{ m/s})^2",
+        "inputs": [
+          {
+            "symbol": "m",
+            "value": "180",
+            "unit": "kg"
+          },
+          {
+            "symbol": "v",
+            "value": "16.67",
+            "unit": "m/s"
+          }
+        ],
+        "result": "25.01",
+        "unit": "kJ (Avg Power: 8.15 kW)",
+        "status": "recalculated"
+      },
+      {
+        "id": "tractive_resistance_70kmh",
+        "section": "drivetrain",
+        "label": "Total Road Resistance Force (at 70 km/h)",
+        "symbol": "F_{\\text{res}}",
+        "equation_tex": "F_{\\text{res}} = f m g + \\frac{1}{2}\\rho C_d A v^2 = 44.15\\text{ N} + 137.91\\text{ N}",
+        "inputs": [
+          {
+            "symbol": "m",
+            "value": "180",
+            "unit": "kg"
+          },
+          {
+            "symbol": "v",
+            "value": "19.44",
+            "unit": "m/s"
+          },
+          {
+            "symbol": "C_d \\cdot A",
+            "value": "0.595",
+            "unit": "m²"
+          }
+        ],
+        "result": "182.1",
+        "unit": "N (Power Demand: 3.54 kW)",
+        "status": "recalculated"
+      },
+      {
+        "id": "sprocket_ratio",
+        "section": "drivetrain",
+        "label": "Sprocket Reduction Ratio",
+        "symbol": "i",
+        "equation_tex": "i = \\frac{N_{\\text{driven}}}{N_{\\text{drive}}} = \\frac{42}{15}",
+        "inputs": [
+          {
+            "symbol": "N_{\\text{driven}}",
+            "value": "42",
+            "unit": "teeth"
+          },
+          {
+            "symbol": "N_{\\text{drive}}",
+            "value": "15",
+            "unit": "teeth"
+          }
+        ],
+        "result": "2.80",
+        "unit": "—",
+        "status": "recalculated"
+      },
+      {
+        "id": "drivetrain_axle_torque",
+        "section": "drivetrain",
+        "label": "Rear Axle Available Tractive Torque",
+        "symbol": "T_{\\text{axle}}",
+        "equation_tex": "T_{\\text{axle}} = T_{\\text{motor}} \\cdot i \\cdot \\eta_{\\text{chain}} = 78\\text{ N·m} \\times 2.80 \\times 0.95",
+        "inputs": [
+          {
+            "symbol": "T_{\\text{motor}}",
+            "value": "78",
+            "unit": "N·m"
+          },
+          {
+            "symbol": "i",
+            "value": "2.80",
+            "unit": "—"
+          }
+        ],
+        "result": "207.5",
+        "unit": "N·m (2.11× Margin vs Demand)",
+        "status": "recalculated"
+      },
+      {
+        "id": "battery_discharge_rate",
+        "section": "drivetrain",
+        "label": "Battery Continuous C-Rate",
+        "symbol": "C_{\\text{cont}}",
+        "equation_tex": "C_{\\text{cont}} = \\frac{I_{\\text{rated}}}{C_{\\text{pack}}} = \\frac{70\\text{ A}}{90\\text{ Ah}}",
+        "inputs": [
+          {
+            "symbol": "V_{\\text{nom}}",
+            "value": "72",
+            "unit": "V"
+          },
+          {
+            "symbol": "Capacity",
+            "value": "90",
+            "unit": "Ah"
+          }
+        ],
+        "result": "0.78",
+        "unit": "C (~55 km Track Range)",
+        "status": "recalculated"
+      }
+    ],
+    "footerNote": "Simulation contours are illustrative, not physical tests. Numerical results are omitted wherever source values or interpretations conflict."
   }
 }

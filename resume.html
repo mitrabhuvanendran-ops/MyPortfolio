@@ -13,6 +13,7 @@
         --muted: #94a3b8;
         --accent: #729dff;
         --accent-2: #7dd3fc;
+        --line: rgba(255, 255, 255, 0.08);
       }
       * { box-sizing: border-box; }
       body {
@@ -37,91 +38,245 @@
         color: var(--accent-2);
         text-decoration: none;
         font-weight: 600;
+        font-size: 14px;
+      }
+      .topbar a:hover {
+        text-decoration: underline;
       }
       .card {
-        background: rgba(15, 23, 42, 0.92);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 24px;
-        padding: 28px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+        background: rgba(15, 23, 42, 0.94);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 36px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       }
-      h1, h2, h3 { margin: 0 0 8px; }
-      .name { font-size: 2rem; margin-bottom: 6px; }
-      .title { color: var(--accent); font-weight: 700; }
-      .contact { color: var(--muted); margin-top: 10px; }
-      .section { margin-top: 26px; }
-      .section h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-2); }
-      .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      h1, h2, h3, h4 { margin: 0 0 6px; }
+      .name { font-size: 2.2rem; letter-spacing: -0.03em; color: #fff; }
+      .title { color: var(--accent); font-weight: 700; font-size: 1.15rem; margin-top: 2px; }
+      .contact { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+      .section { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 22px; }
+      .section h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-2); margin-bottom: 12px; }
+      .skill-group { margin-bottom: 14px; }
+      .skill-label { font-size: 0.85rem; font-weight: 600; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+      .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
       .pill {
-        background: rgba(114, 157, 255, 0.16);
+        background: rgba(114, 157, 255, 0.14);
+        border: 1px solid rgba(114, 157, 255, 0.25);
         color: #dbeafe;
-        padding: 7px 10px;
+        padding: 5px 11px;
         border-radius: 999px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
-      ul { padding-left: 18px; margin: 8px 0 0; }
+      .item { margin-bottom: 18px; }
+      .item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+      .item-title { font-size: 1rem; font-weight: 700; color: #f8fafc; }
+      .item-meta { font-size: 0.85rem; color: var(--accent); font-family: monospace; }
+      ul { padding-left: 18px; margin: 6px 0 0; }
+      li { margin-bottom: 5px; font-size: 0.95rem; color: #cbd5e1; }
       .muted { color: var(--muted); }
-      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-      @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+      a.inline-link { color: var(--accent-2); text-decoration: underline; text-underline-offset: 3px; }
+      a.inline-link:hover { color: #fff; }
+      @media (max-width: 700px) {
+        .card { padding: 22px; }
+        .item-header { flex-direction: column; }
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
       <div class="topbar">
         <strong>Mitra B</strong>
-        <a href="/">← Back to portfolio</a>
+        <div>
+          <a href="/design/index.html" style="margin-right:18px">Go-Kart Design Portfolio ↗</a>
+          <a href="/">← Back to portfolio</a>
+        </div>
       </div>
 
       <div class="card">
-        <h1 class="name">MITRA</h1>
-        <div class="title">Mechatronics Engineering Undergraduate</div>
-        <div class="contact">Coimbatore, Tamil Nadu, India · +91 6374819018 · mitrabhuvanendran@gmail.com</div>
-        <div class="contact">LinkedIn: linkedin.com/in/mitra-bhuvanendran-45613732a</div>
+        <h1 class="name">MITRA B</h1>
+        <div class="title">Robotics &amp; Mechanical Design Engineer</div>
+        <div class="contact">Coimbatore, Tamil Nadu, India · +91 6374819018 · <a href="mailto:mitrabhuvanendran@gmail.com" style="color:inherit">mitrabhuvanendran@gmail.com</a></div>
+        <div class="contact">LinkedIn: <a href="https://www.linkedin.com/in/mitra-bhuvanendran-45613732a" target="_blank" rel="noreferrer" class="inline-link">linkedin.com/in/mitra-bhuvanendran-45613732a</a></div>
 
         <div class="section">
           <h2>Career Objective</h2>
-          <p>Mechatronics Engineering undergraduate completing the 4th semester in April 2025, with strong interest and passion for core mechanical CAD design, ROS, and embedded systems. Gained exposure through academic projects and technical clubs. Seeking an internship opportunity in real-world engineering environments at robotics and automation-based firms, where I can contribute with discipline, curiosity, and a strong willingness to learn.</p>
+          <p style="margin:0;color:#cbd5e1;font-size:0.95rem;line-height:1.7">Mechatronics Engineering undergraduate specializing in mechanical CAD &amp; CAE validation, vehicle dynamics, robotics (ROS2/Nav2/Gazebo), and embedded systems. Proven record leading chassis design and ANSYS FEA structural validation for a national championship-winning electric race kart (GKDC, FKDC, IKR). Seeking engineering opportunities where hands-on CAD design, simulation rigour, and multidisciplinary systems engineering drive impactful product development.</p>
         </div>
 
         <div class="section">
           <h2>Education</h2>
-          <p><strong>Bachelor of Engineering: Mechatronics Engineering</strong><br />2024 - 2028<br />Kumaraguru College of Technology, Coimbatore, Tamil Nadu<br />CGPA: 9.2 (up to 3rd semester)</p>
-        </div>
-
-        <div class="section">
-          <h2>Technical Skills</h2>
-          <div class="pill-row">
-            <span class="pill">SolidWorks</span>
-            <span class="pill">Fusion 360</span>
-            <span class="pill">GD&amp;T</span>
-            <span class="pill">CNC / VMC</span>
-            <span class="pill">Welding</span>
-            <span class="pill">Sensors &amp; Actuators</span>
-            <span class="pill">PLC Fundamentals</span>
-            <span class="pill">MATLAB</span>
-            <span class="pill">ANSYS</span>
-            <span class="pill">ROS</span>
-            <span class="pill">Embedded Systems</span>
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Bachelor of Engineering: Mechatronics Engineering</span>
+              <span class="item-meta">2024 - 2028</span>
+            </div>
+            <p style="margin:4px 0 0;color:#cbd5e1">Kumaraguru College of Technology, Coimbatore, Tamil Nadu<br><strong style="color:var(--accent)">CGPA: 9.2</strong> (up to 3rd semester)</p>
           </div>
         </div>
 
         <div class="section">
-          <h2>Internship, Project &amp; Experience</h2>
-          <ul>
-            <li><strong>Industrial Training at VRN Engineering Works</strong> — exposure to CNC and VMC machining operations.</li>
-            <li><strong>Internship at Hexgen Sports Pvt. Ltd.</strong> — involved in manufacturing and assembly of automatic bowling machines.</li>
-            <li><strong>Designed a detachable wheelchair ramp system</strong> focusing on portability, safety, and practical usability.</li>
-            <li><strong>Design Lead, E-Zeall Racing (Electric Go-Kart)</strong> — contributed to mechanical design and fabrication and won overall champions in national events GKDC, FKDC, and IKR.</li>
-            <li><strong>Joint Secretary</strong> of the Department of Mechatronics Engineering, Kumaraguru College of Technology.</li>
-          </ul>
+          <h2>Technical Skills</h2>
+          <div class="skill-group">
+            <div class="skill-label">Mechanical CAD &amp; CAE Analysis</div>
+            <div class="pill-row">
+              <span class="pill">SolidWorks</span>
+              <span class="pill">ANSYS FEA</span>
+              <span class="pill">CATIA V5</span>
+              <span class="pill">Fusion 360</span>
+              <span class="pill">GD&amp;T</span>
+              <span class="pill">DFM</span>
+              <span class="pill">Structural &amp; Impact FEA</span>
+              <span class="pill">Vehicle Dynamics</span>
+              <span class="pill">Sheet Metal Design</span>
+            </div>
+          </div>
+          <div class="skill-group" style="margin-top:14px">
+            <div class="skill-label">Robotics, Simulation &amp; Controls</div>
+            <div class="pill-row">
+              <span class="pill">ROS2</span>
+              <span class="pill">Gazebo Simulation</span>
+              <span class="pill">RViz</span>
+              <span class="pill">SLAM Toolbox</span>
+              <span class="pill">Navigation2 (Nav2)</span>
+              <span class="pill">LiDAR</span>
+              <span class="pill">MATLAB &amp; Simulink</span>
+              <span class="pill">Simscape</span>
+              <span class="pill">PLC Fundamentals</span>
+            </div>
+          </div>
+          <div class="skill-group" style="margin-top:14px">
+            <div class="skill-label">Manufacturing, Hardware &amp; Prototyping</div>
+            <div class="pill-row">
+              <span class="pill">CNC / VMC Machining</span>
+              <span class="pill">FDM 3D Printing (Creality)</span>
+              <span class="pill">Welding</span>
+              <span class="pill">Sensors &amp; Actuators</span>
+              <span class="pill">Embedded Systems (ESP32)</span>
+              <span class="pill">IoT &amp; Telemetry (MQTT/BLE)</span>
+            </div>
+          </div>
         </div>
 
         <div class="section">
-          <h2>Additional Information</h2>
+          <h2>Engineering Experience &amp; Internships</h2>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">E-Zeall Racing (Electric Go-Kart) — Chassis Design Team Lead</span>
+              <span class="item-meta">Championship Team</span>
+            </div>
+            <ul>
+              <li>Led 3D mechanical CAD design of tubular space-frame chassis using AISI 4130 Chromoly steel in SolidWorks.</li>
+              <li>Conducted ANSYS FEA structural validation across front, rear, and side impact cases and torsional rigidity analysis.</li>
+              <li>Evaluated CATIA V5 ergonomics manikin posture and cockpit reach for optimal driver clearance and safety compliance.</li>
+              <li>Prepared precision manufacturing drawings and coordinated shop-floor fabrication, welding, and assembly.</li>
+              <li>Contributed to team winning <strong>Overall Champions</strong> in three national karting championships: <strong>GKDC</strong>, <strong>FKDC</strong>, and <strong>IKR</strong>.</li>
+              <li>Interactive Portfolio: <a href="/design/index.html" class="inline-link">Explore Full Standalone Go-Kart Design Portfolio ↗</a></li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">YOI Robotics Laboratory — Robotics Intern</span>
+              <span class="item-meta">June 2026</span>
+            </div>
+            <ul>
+              <li>Developed ROS2 software packages for differential-drive mobile robotics and autonomous navigation.</li>
+              <li>Configured Gazebo simulation environments, sensor visualization in RViz, and odometry workflows.</li>
+              <li>Gained practical depth in ROS2 computation graph, launch systems, and mobile robot middleware architecture.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Hexgen Sports Pvt. Ltd. — Product Design Intern</span>
+              <span class="item-meta">Dec 2025</span>
+            </div>
+            <ul>
+              <li>Supported product engineering and mechanism design for automated sports equipment (bowling machines).</li>
+              <li>Applied Design for Manufacturing (DFM) guidelines and assisted in physical prototype assembly and testing.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">VRN Engineering Works — Industrial Trainee</span>
+              <span class="item-meta">June 2025</span>
+            </div>
+            <ul>
+              <li>Gained practical industrial exposure to CNC and Vertical Machining Center (VMC) precision operations.</li>
+              <li>Studied production workflows, machining tolerances, GD&amp;T implementation, and quality inspection protocols.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Key Projects</h2>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Electric Go-Kart Subsystem Design &amp; CAE Validation</span>
+              <span class="item-meta">Mechanical Design &amp; CAE</span>
+            </div>
+            <ul>
+              <li>Integrated vehicle study spanning tubular chassis structure, Ackermann steering kinematics, hydraulic braking, and electric drivetrain.</li>
+              <li>Executed 12 ANSYS FEA simulation cases (impact, torsion, fatigue, thermal disc) and verified 12 analytical calculations.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Autonomous Mobile Robot (ROS2, SLAM &amp; Nav2)</span>
+              <span class="item-meta">Autonomous Systems</span>
+            </div>
+            <ul>
+              <li>Modeled an autonomous differential-drive robot equipped with LiDAR in Gazebo simulation.</li>
+              <li>Implemented real-time 2D mapping via SLAM Toolbox and autonomous obstacle avoidance with Nav2 costmaps.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Detachable Wheelchair Ramp System</span>
+              <span class="item-meta">Accessibility Engineering</span>
+            </div>
+            <ul>
+              <li>Designed a lightweight, portable folding ramp mechanism in SolidWorks for locations without permanent accessibility infrastructure.</li>
+              <li>Conducted structural stress and deflection analysis to verify load capacity and user safety.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Industrial IoT Telemetry &amp; Edge Monitoring</span>
+              <span class="item-meta">Embedded Systems</span>
+            </div>
+            <ul>
+              <li>Built multi-task embedded prototypes on ESP32 microcontrollers streaming sensor telemetry to cloud dashboards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Research Track</h2>
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">FDM Process Parameter Optimization &amp; Strength Analysis</span>
+              <span class="item-meta">Additive Manufacturing</span>
+            </div>
+            <p style="margin:4px 0 0;color:#cbd5e1;font-size:0.95rem">Experimental research analyzing the effect of infill density, print speed, and thermal settings on the tensile strength of FDM 3D-printed components using Creality 3D printing systems.</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Leadership &amp; Awards</h2>
           <ul>
-            <li><strong>Languages:</strong> Tamil, English</li>
-            <li><strong>Awards / Activities:</strong> Mahatma Gandhi Scholarship Award (twice), Kumaraguru Achiever Award (twice), winner of paper presentation at a national-level technical symposium.</li>
-            <li><strong>Certifications:</strong> Scilab Training – Spoken Tutorial Project, IIT Bombay; MATLAB Onramp – MathWorks.</li>
+            <li><strong>Joint Secretary</strong>, Department of Mechatronics Engineering, Kumaraguru College of Technology.</li>
+            <li><strong>National Overall Champions</strong>: GKDC, FKDC, and IKR Electric Karting Competitions.</li>
+            <li><strong>Mahatma Gandhi Scholarship Award</strong> (Twice recipient for academic excellence).</li>
+            <li><strong>Kumaraguru Achiever Award</strong> (Twice recipient for outstanding technical and extracurricular contributions).</li>
+            <li><strong>Winner</strong>, Technical Paper Presentation at National-level Technical Symposium.</li>
+            <li><strong>Certifications</strong>: MATLAB Onramp (MathWorks), Scilab Training (IIT Bombay Spoken Tutorial).</li>
           </ul>
         </div>
       </div>
