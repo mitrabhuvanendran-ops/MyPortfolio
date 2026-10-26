@@ -363,6 +363,7 @@ function normalizeContent(data) {
 }
 
 async function loadContent() {
+  try { localStorage.removeItem('mitra_portfolio_content'); } catch(e){}
   try {
     const r = await fetch('/site-content.json');
     if (!r.ok) throw new Error('Static content unavailable');
