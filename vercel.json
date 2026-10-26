@@ -1,14 +1,19 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/design", "destination": "/index.html" },
+    { "source": "/design", "destination": "/design/index.html" },
+    { "source": "/design/", "destination": "/design/index.html" },
     { "source": "/design/index.html", "destination": "/design/index.html" },
     { "source": "/design/assets/(.*)", "destination": "/design/assets/$1" },
     { "source": "/design/figures/(.*)", "destination": "/design/figures/$1" },
     { "source": "/design/site-data.json", "destination": "/design/site-data.json" },
     { "source": "/design/favicon.svg", "destination": "/design/favicon.svg" },
+    { "source": "/assets/(.*)", "destination": "/design/assets/$1" },
+    { "source": "/figures/(.*)", "destination": "/design/figures/$1" },
+    { "source": "/site-data.json", "destination": "/design/site-data.json" },
     { "source": "/site-content.json", "destination": "/site-content.json" },
     { "source": "/uploads/(.*)", "destination": "/uploads/$1" },
+    { "source": "/resume", "destination": "/resume.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

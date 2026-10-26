@@ -33,6 +33,23 @@ const server = http.createServer((req, res) => {
     return sendFile(path.join(__dirname, 'design', 'index.html'), res);
   }
 
+  // Fallback for /assets/, /figures/ or /site-data.json
+  if (urlPath.startsWith('/assets/')) {
+    const candidate = path.join(__dirname, 'design', urlPath);
+    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
+      return sendFile(candidate, res);
+    }
+  }
+  if (urlPath.startsWith('/figures/')) {
+    const candidate = path.join(__dirname, 'design', urlPath);
+    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
+      return sendFile(candidate, res);
+    }
+  }
+  if (urlPath === '/site-data.json') {
+    return sendFile(path.join(__dirname, 'design', 'site-data.json'), res);
+  }
+
   // Clean URLs for resume
   if (urlPath === '/resume' && fs.existsSync(path.join(__dirname, 'resume.html'))) {
     return sendFile(path.join(__dirname, 'resume.html'), res);
@@ -61,4 +78,3 @@ function sendFile(filePath, res) {
 server.listen(PORT, () => {
   console.log(`Portfolio server is running at http://localhost:${PORT}`);
 });
-

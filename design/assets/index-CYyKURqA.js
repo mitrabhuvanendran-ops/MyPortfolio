@@ -386,7 +386,7 @@ l0,-`+(t+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
       <p>${$(e.footerNote)}</p>
       <a href="#cover">Back to top ↑</a>
     </footer>
-  `,document.querySelector(`[data-print]`).addEventListener(`click`,()=>window.print())}async function Fa(){let e=await fetch(`./site-data.json`);if(!e.ok)throw Error(`Portfolio data request failed (${e.status}).`);Pa(await e.json())}Fa().catch(e=>{console.error(`Unable to load the portfolio.`,e),Oa.innerHTML=`
+  `,document.querySelector(`[data-print]`).addEventListener(`click`,()=>window.print())}async function Fa(){let e=await fetch(`/design/site-data.json`);if(!e.ok)throw Error(`Portfolio data request failed (${e.status}).`);Pa(await e.json())}Fa().catch(e=>{console.error(`Unable to load the portfolio.`,e),Oa.innerHTML=`
     <main class="load-error" role="alert">
       <h1>Portfolio unavailable</h1>
       <p>Refresh the page or check that the site data file is available.</p>

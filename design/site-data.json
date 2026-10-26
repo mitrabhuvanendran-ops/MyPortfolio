@@ -1,11 +1,11 @@
 {
   "title": "Electric Go-Kart | Mechanical Design Portfolio",
   "hero": {
-    "eyebrow": "Mechanical engineering · design portfolio",
+    "eyebrow": "Mechanical engineering \u00b7 design portfolio",
     "title": "Electric Go-Kart Design",
     "descriptor": "An integrated vehicle study spanning chassis, steering, braking and electric drive.",
     "image": {
-      "src": "./figures/kart-assembly.webp",
+      "src": "/design/figures/kart-assembly.webp",
       "width": 1015,
       "height": 653,
       "alt": "Isometric CAD view of the complete electric go-kart assembly."
@@ -19,13 +19,18 @@
       "designTitle": "A connected tubular frame",
       "design": "The frame links the driver cell, seat supports and perimeter rails into a single load path. The design report specifies AISI 4130 steel for the frame tubes.",
       "approach": "Finite-element studies cover front, rear and side impact cases, followed by a torsional stiffness case. Result values and pass claims are held because the source report conflicts with its own interpretation.",
+      "calculation": {
+        "label": "Structural check",
+        "equation": "\\sigma = \\frac{F}{A}",
+        "note": "Nominal stress relation; impact loads and numerical results remain under review."
+      },
       "simulations": [
         {
           "name": "Chassis impact",
-          "analysis": "Static structural · impact",
-          "caption": "Front impact · contour view only",
+          "analysis": "Static structural \u00b7 impact",
+          "caption": "Front impact \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-chassis-impact.webp",
+            "src": "/design/figures/sim-chassis-impact.webp",
             "width": 319,
             "height": 152,
             "alt": "Cropped finite-element contour view of the chassis impact case."
@@ -33,10 +38,10 @@
         },
         {
           "name": "Rear impact case",
-          "analysis": "Static structural · impact",
-          "caption": "Rear impact · contour view only",
+          "analysis": "Static structural \u00b7 impact",
+          "caption": "Rear impact \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-chassis-impact-rear.webp",
+            "src": "/design/figures/sim-chassis-impact-rear.webp",
             "width": 313,
             "height": 148,
             "alt": "Cropped finite-element contour view of the rear chassis impact case."
@@ -44,10 +49,10 @@
         },
         {
           "name": "Side impact case",
-          "analysis": "Static structural · impact",
-          "caption": "Side impact · contour view only",
+          "analysis": "Static structural \u00b7 impact",
+          "caption": "Side impact \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-chassis-impact-side.webp",
+            "src": "/design/figures/sim-chassis-impact-side.webp",
             "width": 315,
             "height": 147,
             "alt": "Cropped finite-element contour view of the side chassis impact case."
@@ -55,10 +60,10 @@
         },
         {
           "name": "Chassis torsion",
-          "analysis": "Static structural · torsion",
-          "caption": "Torsion case · contour view only",
+          "analysis": "Static structural \u00b7 torsion",
+          "caption": "Torsion case \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-chassis-torsion.webp",
+            "src": "/design/figures/sim-chassis-torsion.webp",
             "width": 695,
             "height": 368,
             "alt": "Cropped finite-element contour view of the chassis torsion case."
@@ -66,81 +71,35 @@
         }
       ],
       "wireframe": {
-        "src": "./figures/wireframe-chassis.webp",
+        "src": "/design/figures/wireframe-chassis.webp",
         "width": 452,
         "height": 394,
         "alt": "Line-art CAD diagram of the tubular go-kart chassis."
       },
       "ergonomics": {
-        "title": "Posture & ergonomics · CATIA",
+        "title": "Posture & ergonomics \u00b7 CATIA",
         "description": "Side and front occupant views support a qualitative review of seated posture, seat support, steering and pedal reach, and cockpit clearance. This visual fit check does not claim measured anthropometric dimensions or ergonomic certification.",
         "views": [
           {
-            "caption": "Side view · seat and control reach",
+            "caption": "Side view \u00b7 seat and control reach",
             "image": {
-              "src": "./figures/catia-posture-side.webp",
+              "src": "/design/figures/catia-posture-side.webp",
               "width": 793,
               "height": 495,
               "alt": "CATIA side view of a seated driver checking seat support, pedal reach and steering reach."
             }
           },
           {
-            "caption": "Front view · seating alignment and clearance",
+            "caption": "Front view \u00b7 seating alignment and clearance",
             "image": {
-              "src": "./figures/catia-posture-front.webp",
+              "src": "/design/figures/catia-posture-front.webp",
               "width": 759,
               "height": 485,
               "alt": "CATIA front view of a seated driver checking centered posture and cockpit clearance."
             }
           }
         ]
-      },
-      "calculations": [
-        {
-          "id": "chassis_impact_stress",
-          "section": "chassis",
-          "label": "Tube Impact Axial Stress",
-          "symbol": "\\sigma",
-          "equation_tex": "\\sigma = \\frac{F_{\\text{front}}}{2 \\cdot A_{\\text{tube}}} = \\frac{44800\\text{ N}}{2 \\times 123.1\\text{ mm}^2}",
-          "inputs": [
-            {
-              "symbol": "F_{\\text{front}}",
-              "value": "44,800",
-              "unit": "N"
-            },
-            {
-              "symbol": "A_{\\text{tube}}",
-              "value": "123.1",
-              "unit": "mm²"
-            }
-          ],
-          "result": "181.9",
-          "unit": "MPa (FOS: 2.53 vs 460 MPa Yield)",
-          "status": "recalculated"
-        },
-        {
-          "id": "chassis_torsional_stiffness",
-          "section": "chassis",
-          "label": "Torsional Stiffness Estimate",
-          "symbol": "K_t",
-          "equation_tex": "K_t = \\frac{T}{\\theta} = \\frac{M \\cdot L_{\\text{track}}}{\\arctan(\\Delta z / [W_f / 2])}",
-          "inputs": [
-            {
-              "symbol": "M",
-              "value": "500",
-              "unit": "N·m"
-            },
-            {
-              "symbol": "W_f",
-              "value": "1032",
-              "unit": "mm"
-            }
-          ],
-          "result": "1,240",
-          "unit": "N·m/deg (Target Compliant)",
-          "status": "recalculated"
-        }
-      ]
+      }
     },
     {
       "id": "steering",
@@ -149,13 +108,18 @@
       "designTitle": "Coordinated wheel geometry",
       "design": "The steering layout uses Ackermann geometry to coordinate the inside and outside front wheels. The knuckle and stub arm support wheel alignment and transmit front-corner loads.",
       "approach": "ANSYS static-structural cases are reported for the knuckle and stub arm. Steering radii and component result values are not published because the source assumptions and interpretations need reconciliation.",
+      "calculation": {
+        "label": "Ackermann relation",
+        "equation": "\\cot(\\delta_o) - \\cot(\\delta_i) = \\frac{t}{L}",
+        "note": "Relates inner and outer wheel angles to track and wheelbase; geometry outputs remain under review."
+      },
       "simulations": [
         {
           "name": "Knuckle",
           "analysis": "Static structural",
-          "caption": "Steering knuckle · contour view only",
+          "caption": "Steering knuckle \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-knuckle.webp",
+            "src": "/design/figures/sim-knuckle.webp",
             "width": 865,
             "height": 438,
             "alt": "Cropped finite-element contour view of the steering knuckle."
@@ -164,9 +128,9 @@
         {
           "name": "Stub arm",
           "analysis": "Static structural",
-          "caption": "Stub arm · contour view only",
+          "caption": "Stub arm \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-stub-arm.webp",
+            "src": "/design/figures/sim-stub-arm.webp",
             "width": 686,
             "height": 339,
             "alt": "Cropped finite-element contour view of the stub arm."
@@ -174,79 +138,11 @@
         }
       ],
       "wireframe": {
-        "src": "./figures/wireframe-steering.webp",
+        "src": "/design/figures/wireframe-steering.webp",
         "width": 1163,
         "height": 500,
         "alt": "Line-art CAD diagram of the steering linkage and front wheels."
-      },
-      "calculations": [
-        {
-          "id": "steering_ackermann_outer",
-          "section": "steering",
-          "label": "Ackermann Kinematic Angle Match",
-          "symbol": "\\delta_o",
-          "equation_tex": "\\cot(\\delta_o) - \\cot(\\delta_i) = \\frac{K_f}{L} \\Rightarrow \\cot(21.32^\\circ) - \\cot(32.19^\\circ) = 0.974",
-          "inputs": [
-            {
-              "symbol": "\\delta_i",
-              "value": "32.19",
-              "unit": "deg"
-            },
-            {
-              "symbol": "K_f/L",
-              "value": "0.974",
-              "unit": "—"
-            }
-          ],
-          "result": "21.32",
-          "unit": "deg (100% Ackermann True)",
-          "status": "recalculated"
-        },
-        {
-          "id": "steering_turning_radius",
-          "section": "steering",
-          "label": "Centerline Turning Radius",
-          "symbol": "R",
-          "equation_tex": "R = \\sqrt{(L \\cot\\delta_i + K_f/2)^2 + L^2}",
-          "inputs": [
-            {
-              "symbol": "L",
-              "value": "1060",
-              "unit": "mm"
-            },
-            {
-              "symbol": "K_f",
-              "value": "1032",
-              "unit": "mm"
-            }
-          ],
-          "result": "2.45",
-          "unit": "m (Track Regulation Pass)",
-          "status": "recalculated"
-        },
-        {
-          "id": "steering_effort",
-          "section": "steering",
-          "label": "Driver Steering Effort",
-          "symbol": "F_{\\text{effort}}",
-          "equation_tex": "F_{\\text{effort}} = \\frac{T_{\\text{col}}}{r_{\\text{wheel}}} = \\frac{7.05\\text{ N·m}}{0.127\\text{ m}}",
-          "inputs": [
-            {
-              "symbol": "T_{\\text{col}}",
-              "value": "7.05",
-              "unit": "N·m"
-            },
-            {
-              "symbol": "D_{\\text{rim}}",
-              "value": "254",
-              "unit": "mm"
-            }
-          ],
-          "result": "55.5",
-          "unit": "N (Ergonomic Fatigue Safe)",
-          "status": "recalculated"
-        }
-      ]
+      }
     },
     {
       "id": "braking",
@@ -255,13 +151,18 @@
       "designTitle": "From pedal input to disc",
       "design": "Pedal force is transmitted through the hydraulic circuit to the master cylinder, caliper and brake disc. The master-cylinder mount is included as a structural support component.",
       "approach": "The source includes a transient thermal study of the disc and a static-structural study of the master-cylinder mount. Braking assumptions differ between reports, so no performance or thermal result is presented as validated.",
+      "calculation": {
+        "label": "Energy to be dissipated",
+        "equation": "E_k = \\frac{1}{2} m v^2",
+        "note": "Braking energy relation; source mass and speed assumptions are not reconciled."
+      },
       "simulations": [
         {
           "name": "Brake disc",
           "analysis": "Thermal analysis",
-          "caption": "Brake disc · thermal contour",
+          "caption": "Brake disc \u00b7 thermal contour",
           "image": {
-            "src": "./figures/sim-brake-disc.webp",
+            "src": "/design/figures/sim-brake-disc.webp",
             "width": 501,
             "height": 328,
             "alt": "Cropped thermal contour image of a brake disc."
@@ -270,9 +171,9 @@
         {
           "name": "Master-cylinder mount",
           "analysis": "Static structural",
-          "caption": "Master-cylinder mount · contour view only",
+          "caption": "Master-cylinder mount \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-master-cylinder-mount.webp",
+            "src": "/design/figures/sim-master-cylinder-mount.webp",
             "width": 864,
             "height": 441,
             "alt": "Cropped finite-element contour view of the master-cylinder mount."
@@ -280,89 +181,11 @@
         }
       ],
       "wireframe": {
-        "src": "./figures/wireframe-braking.webp",
+        "src": "/design/figures/wireframe-braking.webp",
         "width": 290,
         "height": 463,
         "alt": "Line-art CAD diagram of the brake disc and caliper assembly."
-      },
-      "calculations": [
-        {
-          "id": "brake_line_pressure",
-          "section": "braking",
-          "label": "Hydraulic Circuit Line Pressure",
-          "symbol": "P_{\\text{line}}",
-          "equation_tex": "P_{\\text{line}} = \\frac{F_{\\text{pedal}} \\cdot R_p}{A_{\\text{mc}}} = \\frac{350\\text{ N} \\times 5}{(\\pi/4)(17\\text{ mm})^2}",
-          "inputs": [
-            {
-              "symbol": "F_{\\text{pedal}}",
-              "value": "350",
-              "unit": "N"
-            },
-            {
-              "symbol": "R_p",
-              "value": "5:1",
-              "unit": "—"
-            },
-            {
-              "symbol": "d_{\\text{mc}}",
-              "value": "17",
-              "unit": "mm"
-            }
-          ],
-          "result": "7.71",
-          "unit": "MPa (77.1 bar Verified)",
-          "status": "recalculated"
-        },
-        {
-          "id": "braking_torque",
-          "section": "braking",
-          "label": "Axle Braking Torque",
-          "symbol": "T_b",
-          "equation_tex": "T_b = 2 \\cdot \\mu_{\\text{pad}} \\cdot F_{\\text{clamp}} \\cdot r_e = 2(0.40)(7000)(0.0825)",
-          "inputs": [
-            {
-              "symbol": "\\mu_{\\text{pad}}",
-              "value": "0.40",
-              "unit": "—"
-            },
-            {
-              "symbol": "F_{\\text{clamp}}",
-              "value": "7,000",
-              "unit": "N"
-            },
-            {
-              "symbol": "r_e",
-              "value": "82.5",
-              "unit": "mm"
-            }
-          ],
-          "result": "462.0",
-          "unit": "N·m (Full Tire Lockup Capability)",
-          "status": "recalculated"
-        },
-        {
-          "id": "braking_kinetic_energy",
-          "section": "braking",
-          "label": "Kinetic Energy to Dissipate",
-          "symbol": "E_k",
-          "equation_tex": "E_k = \\frac{1}{2} m v^2 = \\frac{1}{2}(180\\text{ kg})(16.67\\text{ m/s})^2",
-          "inputs": [
-            {
-              "symbol": "m",
-              "value": "180",
-              "unit": "kg"
-            },
-            {
-              "symbol": "v",
-              "value": "16.67",
-              "unit": "m/s"
-            }
-          ],
-          "result": "25.01",
-          "unit": "kJ (Avg Power: 8.15 kW)",
-          "status": "recalculated"
-        }
-      ]
+      }
     },
     {
       "id": "drivetrain",
@@ -371,13 +194,28 @@
       "designTitle": "A compact mechanical power path",
       "design": "The motor drives the rear axle through a chain reduction. The tripod joint transfers torque, while the motor and shaft mounts support the rotating assembly.",
       "approach": "The CAE report analyses the rear shaft, tripod, motor mounts and shaft mount. Torque assumptions and some interpretations conflict, so simulation values are withheld.",
+      "calculationIds": [
+        "sprocket_ratio",
+        "tractive_force_sum"
+      ],
       "simulations": [
+        {
+          "name": "Rear axle / shaft",
+          "analysis": "Static structural \u00b7 fatigue",
+          "caption": "Rear axle / shaft \u00b7 contour view only",
+          "image": {
+            "src": "/design/figures/sim-rear-axle.webp",
+            "width": 336,
+            "height": 149,
+            "alt": "Cropped finite-element contour view of the rear axle shaft."
+          }
+        },
         {
           "name": "Tripod joint",
           "analysis": "Static structural",
-          "caption": "Tripod joint · contour view only",
+          "caption": "Tripod joint \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-tripod.webp",
+            "src": "/design/figures/sim-tripod.webp",
             "width": 587,
             "height": 370,
             "alt": "Cropped finite-element contour view of the tripod joint."
@@ -386,9 +224,9 @@
         {
           "name": "Motor mount",
           "analysis": "Static structural",
-          "caption": "Motor mount · contour view only",
+          "caption": "Motor mount \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-motor-mount.webp",
+            "src": "/design/figures/sim-motor-mount.webp",
             "width": 491,
             "height": 225,
             "alt": "Cropped finite-element contour view of the motor mount."
@@ -397,9 +235,9 @@
         {
           "name": "Motor back mount",
           "analysis": "Static structural",
-          "caption": "Motor back mount · contour view only",
+          "caption": "Motor back mount \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-motor-back-mount.webp",
+            "src": "/design/figures/sim-motor-back-mount.webp",
             "width": 540,
             "height": 246,
             "alt": "Cropped finite-element contour view of the motor back mount."
@@ -408,9 +246,9 @@
         {
           "name": "Shaft mount",
           "analysis": "Static structural",
-          "caption": "Shaft mount · contour view only",
+          "caption": "Shaft mount \u00b7 contour view only",
           "image": {
-            "src": "./figures/sim-shaft-mount.webp",
+            "src": "/design/figures/sim-shaft-mount.webp",
             "width": 585,
             "height": 267,
             "alt": "Cropped finite-element contour view of the shaft mount."
@@ -418,386 +256,61 @@
         }
       ],
       "wireframe": {
-        "src": "./figures/wireframe-drivetrain.webp",
+        "src": "/design/figures/wireframe-drivetrain.webp",
         "width": 932,
         "height": 563,
         "alt": "Line-art CAD diagram of the motor, chain and rear axle assembly."
-      },
-      "calculations": [
-        {
-          "id": "tractive_resistance_70kmh",
-          "section": "drivetrain",
-          "label": "Total Road Resistance Force (at 70 km/h)",
-          "symbol": "F_{\\text{res}}",
-          "equation_tex": "F_{\\text{res}} = f m g + \\frac{1}{2}\\rho C_d A v^2 = 44.15\\text{ N} + 137.91\\text{ N}",
-          "inputs": [
-            {
-              "symbol": "m",
-              "value": "180",
-              "unit": "kg"
-            },
-            {
-              "symbol": "v",
-              "value": "19.44",
-              "unit": "m/s"
-            },
-            {
-              "symbol": "C_d \\cdot A",
-              "value": "0.595",
-              "unit": "m²"
-            }
-          ],
-          "result": "182.1",
-          "unit": "N (Power Demand: 3.54 kW)",
-          "status": "recalculated"
-        },
-        {
-          "id": "sprocket_ratio",
-          "section": "drivetrain",
-          "label": "Sprocket Reduction Ratio",
-          "symbol": "i",
-          "equation_tex": "i = \\frac{N_{\\text{driven}}}{N_{\\text{drive}}} = \\frac{42}{15}",
-          "inputs": [
-            {
-              "symbol": "N_{\\text{driven}}",
-              "value": "42",
-              "unit": "teeth"
-            },
-            {
-              "symbol": "N_{\\text{drive}}",
-              "value": "15",
-              "unit": "teeth"
-            }
-          ],
-          "result": "2.80",
-          "unit": "—",
-          "status": "recalculated"
-        },
-        {
-          "id": "drivetrain_axle_torque",
-          "section": "drivetrain",
-          "label": "Rear Axle Available Tractive Torque",
-          "symbol": "T_{\\text{axle}}",
-          "equation_tex": "T_{\\text{axle}} = T_{\\text{motor}} \\cdot i \\cdot \\eta_{\\text{chain}} = 78\\text{ N·m} \\times 2.80 \\times 0.95",
-          "inputs": [
-            {
-              "symbol": "T_{\\text{motor}}",
-              "value": "78",
-              "unit": "N·m"
-            },
-            {
-              "symbol": "i",
-              "value": "2.80",
-              "unit": "—"
-            }
-          ],
-          "result": "207.5",
-          "unit": "N·m (2.11× Margin vs Demand)",
-          "status": "recalculated"
-        },
-        {
-          "id": "battery_discharge_rate",
-          "section": "drivetrain",
-          "label": "Battery Continuous C-Rate",
-          "symbol": "C_{\\text{cont}}",
-          "equation_tex": "C_{\\text{cont}} = \\frac{I_{\\text{rated}}}{C_{\\text{pack}}} = \\frac{70\\text{ A}}{90\\text{ Ah}}",
-          "inputs": [
-            {
-              "symbol": "V_{\\text{nom}}",
-              "value": "72",
-              "unit": "V"
-            },
-            {
-              "symbol": "Capacity",
-              "value": "90",
-              "unit": "Ah"
-            }
-          ],
-          "result": "0.78",
-          "unit": "C (~55 km Track Range)",
-          "status": "recalculated"
-        }
-      ]
+      }
     }
   ],
   "metrics": [
     {
-      "id": "chassis_impact_stress",
-      "section": "chassis",
-      "label": "Tube Impact Axial Stress",
-      "symbol": "\\sigma",
-      "equation_tex": "\\sigma = \\frac{F_{\\text{front}}}{2 \\cdot A_{\\text{tube}}} = \\frac{44800\\text{ N}}{2 \\times 123.1\\text{ mm}^2}",
-      "inputs": [
-        {
-          "symbol": "F_{\\text{front}}",
-          "value": "44,800",
-          "unit": "N"
-        },
-        {
-          "symbol": "A_{\\text{tube}}",
-          "value": "123.1",
-          "unit": "mm²"
-        }
-      ],
-      "result": "181.9",
-      "unit": "MPa (FOS: 2.53 vs 460 MPa Yield)",
-      "status": "recalculated"
-    },
-    {
-      "id": "chassis_torsional_stiffness",
-      "section": "chassis",
-      "label": "Torsional Stiffness Estimate",
-      "symbol": "K_t",
-      "equation_tex": "K_t = \\frac{T}{\\theta} = \\frac{M \\cdot L_{\\text{track}}}{\\arctan(\\Delta z / [W_f / 2])}",
-      "inputs": [
-        {
-          "symbol": "M",
-          "value": "500",
-          "unit": "N·m"
-        },
-        {
-          "symbol": "W_f",
-          "value": "1032",
-          "unit": "mm"
-        }
-      ],
-      "result": "1,240",
-      "unit": "N·m/deg (Target Compliant)",
-      "status": "recalculated"
-    },
-    {
-      "id": "steering_ackermann_outer",
-      "section": "steering",
-      "label": "Ackermann Kinematic Angle Match",
-      "symbol": "\\delta_o",
-      "equation_tex": "\\cot(\\delta_o) - \\cot(\\delta_i) = \\frac{K_f}{L} \\Rightarrow \\cot(21.32^\\circ) - \\cot(32.19^\\circ) = 0.974",
-      "inputs": [
-        {
-          "symbol": "\\delta_i",
-          "value": "32.19",
-          "unit": "deg"
-        },
-        {
-          "symbol": "K_f/L",
-          "value": "0.974",
-          "unit": "—"
-        }
-      ],
-      "result": "21.32",
-      "unit": "deg (100% Ackermann True)",
-      "status": "recalculated"
-    },
-    {
-      "id": "steering_turning_radius",
-      "section": "steering",
-      "label": "Centerline Turning Radius",
-      "symbol": "R",
-      "equation_tex": "R = \\sqrt{(L \\cot\\delta_i + K_f/2)^2 + L^2}",
-      "inputs": [
-        {
-          "symbol": "L",
-          "value": "1060",
-          "unit": "mm"
-        },
-        {
-          "symbol": "K_f",
-          "value": "1032",
-          "unit": "mm"
-        }
-      ],
-      "result": "2.45",
-      "unit": "m (Track Regulation Pass)",
-      "status": "recalculated"
-    },
-    {
-      "id": "steering_effort",
-      "section": "steering",
-      "label": "Driver Steering Effort",
-      "symbol": "F_{\\text{effort}}",
-      "equation_tex": "F_{\\text{effort}} = \\frac{T_{\\text{col}}}{r_{\\text{wheel}}} = \\frac{7.05\\text{ N·m}}{0.127\\text{ m}}",
-      "inputs": [
-        {
-          "symbol": "T_{\\text{col}}",
-          "value": "7.05",
-          "unit": "N·m"
-        },
-        {
-          "symbol": "D_{\\text{rim}}",
-          "value": "254",
-          "unit": "mm"
-        }
-      ],
-      "result": "55.5",
-      "unit": "N (Ergonomic Fatigue Safe)",
-      "status": "recalculated"
-    },
-    {
-      "id": "brake_line_pressure",
-      "section": "braking",
-      "label": "Hydraulic Circuit Line Pressure",
-      "symbol": "P_{\\text{line}}",
-      "equation_tex": "P_{\\text{line}} = \\frac{F_{\\text{pedal}} \\cdot R_p}{A_{\\text{mc}}} = \\frac{350\\text{ N} \\times 5}{(\\pi/4)(17\\text{ mm})^2}",
-      "inputs": [
-        {
-          "symbol": "F_{\\text{pedal}}",
-          "value": "350",
-          "unit": "N"
-        },
-        {
-          "symbol": "R_p",
-          "value": "5:1",
-          "unit": "—"
-        },
-        {
-          "symbol": "d_{\\text{mc}}",
-          "value": "17",
-          "unit": "mm"
-        }
-      ],
-      "result": "7.71",
-      "unit": "MPa (77.1 bar Verified)",
-      "status": "recalculated"
-    },
-    {
-      "id": "braking_torque",
-      "section": "braking",
-      "label": "Axle Braking Torque",
-      "symbol": "T_b",
-      "equation_tex": "T_b = 2 \\cdot \\mu_{\\text{pad}} \\cdot F_{\\text{clamp}} \\cdot r_e = 2(0.40)(7000)(0.0825)",
-      "inputs": [
-        {
-          "symbol": "\\mu_{\\text{pad}}",
-          "value": "0.40",
-          "unit": "—"
-        },
-        {
-          "symbol": "F_{\\text{clamp}}",
-          "value": "7,000",
-          "unit": "N"
-        },
-        {
-          "symbol": "r_e",
-          "value": "82.5",
-          "unit": "mm"
-        }
-      ],
-      "result": "462.0",
-      "unit": "N·m (Full Tire Lockup Capability)",
-      "status": "recalculated"
-    },
-    {
-      "id": "braking_kinetic_energy",
-      "section": "braking",
-      "label": "Kinetic Energy to Dissipate",
-      "symbol": "E_k",
-      "equation_tex": "E_k = \\frac{1}{2} m v^2 = \\frac{1}{2}(180\\text{ kg})(16.67\\text{ m/s})^2",
-      "inputs": [
-        {
-          "symbol": "m",
-          "value": "180",
-          "unit": "kg"
-        },
-        {
-          "symbol": "v",
-          "value": "16.67",
-          "unit": "m/s"
-        }
-      ],
-      "result": "25.01",
-      "unit": "kJ (Avg Power: 8.15 kW)",
-      "status": "recalculated"
-    },
-    {
-      "id": "tractive_resistance_70kmh",
-      "section": "drivetrain",
-      "label": "Total Road Resistance Force (at 70 km/h)",
-      "symbol": "F_{\\text{res}}",
-      "equation_tex": "F_{\\text{res}} = f m g + \\frac{1}{2}\\rho C_d A v^2 = 44.15\\text{ N} + 137.91\\text{ N}",
-      "inputs": [
-        {
-          "symbol": "m",
-          "value": "180",
-          "unit": "kg"
-        },
-        {
-          "symbol": "v",
-          "value": "19.44",
-          "unit": "m/s"
-        },
-        {
-          "symbol": "C_d \\cdot A",
-          "value": "0.595",
-          "unit": "m²"
-        }
-      ],
-      "result": "182.1",
-      "unit": "N (Power Demand: 3.54 kW)",
-      "status": "recalculated"
-    },
-    {
       "id": "sprocket_ratio",
       "section": "drivetrain",
-      "label": "Sprocket Reduction Ratio",
+      "label": "Sprocket ratio",
       "symbol": "i",
-      "equation_tex": "i = \\frac{N_{\\text{driven}}}{N_{\\text{drive}}} = \\frac{42}{15}",
+      "equation_tex": "i = N_{driven} / N_{drive}",
       "inputs": [
         {
-          "symbol": "N_{\\text{driven}}",
-          "value": "42",
+          "symbol": "N_{driven}",
+          "value": 42,
           "unit": "teeth"
         },
         {
-          "symbol": "N_{\\text{drive}}",
-          "value": "15",
+          "symbol": "N_{drive}",
+          "value": 15,
           "unit": "teeth"
         }
       ],
-      "result": "2.80",
-      "unit": "—",
+      "result": 2.8,
+      "unit": "\u2014",
       "status": "recalculated"
     },
     {
-      "id": "drivetrain_axle_torque",
+      "id": "tractive_force_sum",
       "section": "drivetrain",
-      "label": "Rear Axle Available Tractive Torque",
-      "symbol": "T_{\\text{axle}}",
-      "equation_tex": "T_{\\text{axle}} = T_{\\text{motor}} \\cdot i \\cdot \\eta_{\\text{chain}} = 78\\text{ N·m} \\times 2.80 \\times 0.95",
+      "label": "Tractive-force sum",
+      "symbol": "F_t",
+      "equation_tex": "F_t = F_r + F_g + F_{ad}",
       "inputs": [
         {
-          "symbol": "T_{\\text{motor}}",
-          "value": "78",
-          "unit": "N·m"
+          "symbol": "F_r",
+          "value": 38.259,
+          "unit": "N"
         },
         {
-          "symbol": "i",
-          "value": "2.80",
-          "unit": "—"
-        }
-      ],
-      "result": "207.5",
-      "unit": "N·m (2.11× Margin vs Demand)",
-      "status": "recalculated"
-    },
-    {
-      "id": "battery_discharge_rate",
-      "section": "drivetrain",
-      "label": "Battery Continuous C-Rate",
-      "symbol": "C_{\\text{cont}}",
-      "equation_tex": "C_{\\text{cont}} = \\frac{I_{\\text{rated}}}{C_{\\text{pack}}} = \\frac{70\\text{ A}}{90\\text{ Ah}}",
-      "inputs": [
-        {
-          "symbol": "V_{\\text{nom}}",
-          "value": "72",
-          "unit": "V"
+          "symbol": "F_g",
+          "value": 0,
+          "unit": "N"
         },
         {
-          "symbol": "Capacity",
-          "value": "90",
-          "unit": "Ah"
+          "symbol": "F_{ad}",
+          "value": 66.85,
+          "unit": "N"
         }
       ],
-      "result": "0.78",
-      "unit": "C (~55 km Track Range)",
+      "result": 105.109,
+      "unit": "N",
       "status": "recalculated"
     }
   ],
